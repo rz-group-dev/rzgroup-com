@@ -14,14 +14,14 @@ export default function FleetSection() {
   const { t } = useTranslation();
 
   return (
-    <section className="py-24 bg-card border-y border-border">
+    <section className="py-24 bg-[#3c473e]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-16">
-          <p className="text-primary text-xs font-light tracking-[0.4em] uppercase mb-4">
+          <p className="text-white/50 text-xs font-light tracking-[0.4em] uppercase mb-4">
             ›&nbsp;&nbsp;{t('home.fleet.title')}
           </p>
-          <h2 className="text-3xl sm:text-4xl font-light text-foreground tracking-tight max-w-lg">
+          <h2 className="text-3xl sm:text-4xl font-light text-white tracking-tight max-w-lg">
             {t('home.fleet.subtitle')}
           </h2>
         </div>
@@ -31,19 +31,12 @@ export default function FleetSection() {
           {vehicles.map((vehicle) => (
             <div
               key={vehicle.name}
-              className="group border border-border hover:border-primary transition-colors"
+              className="group border border-white/10 hover:border-primary transition-colors bg-black/20"
             >
-              {/* Placeholder image area */}
-              <div className="aspect-[4/3] bg-background flex items-center justify-center relative overflow-hidden">
-                <div
-                  className="absolute inset-0 opacity-5"
-                  style={{
-                    background:
-                      'repeating-linear-gradient(45deg, oklch(0.42 0.14 12), oklch(0.42 0.14 12) 1px, transparent 1px, transparent 12px)',
-                  }}
-                />
+              {/* Placeholder image */}
+              <div className="aspect-[4/3] bg-black/30 flex items-center justify-center relative overflow-hidden">
                 <span
-                  className="text-[5rem] text-muted-foreground/20 font-bold select-none leading-none"
+                  className="text-[4.5rem] text-white/10 font-bold select-none leading-none"
                   aria-hidden
                 >
                   ›
@@ -55,10 +48,10 @@ export default function FleetSection() {
                 <span className="text-[10px] font-light tracking-[0.3em] uppercase text-primary mb-2 block">
                   {t(vehicle.categoryKey)}
                 </span>
-                <h3 className="text-sm font-light text-foreground leading-snug">
+                <h3 className="text-sm font-light text-white leading-snug">
                   {vehicle.name}
                 </h3>
-                <p className="text-xs text-muted-foreground font-light mt-1">
+                <p className="text-xs text-white/40 font-light mt-1">
                   {vehicle.seats} pasajeros
                 </p>
               </div>

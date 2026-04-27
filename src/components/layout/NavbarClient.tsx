@@ -19,7 +19,7 @@ export default function NavbarClient() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setIsScrolled(window.scrollY > 20);
+    const onScroll = () => setIsScrolled(window.scrollY > 40);
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
@@ -33,14 +33,16 @@ export default function NavbarClient() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-background/95 backdrop-blur-sm border-b border-border' : 'bg-transparent'
+        isScrolled
+          ? 'bg-white shadow-sm border-b border-border'
+          : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
 
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-1 group">
+          <Link href="/" className="flex items-center gap-1">
             <span className="text-primary text-xl font-light">›</span>
             <span className="text-foreground font-bold text-2xl tracking-widest uppercase">RZ</span>
             <div className="flex flex-col leading-none ml-1">
@@ -55,7 +57,7 @@ export default function NavbarClient() {
           <nav className="hidden lg:flex items-center gap-8">
             <Link
               href="/"
-              className="text-sm font-light tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm font-light tracking-widest uppercase text-foreground/70 hover:text-primary transition-colors"
             >
               {t('nav.home')}
             </Link>
@@ -66,19 +68,19 @@ export default function NavbarClient() {
               onMouseEnter={() => setDropdownOpen(true)}
               onMouseLeave={() => setDropdownOpen(false)}
             >
-              <button className="flex items-center gap-1 text-sm font-light tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors">
+              <button className="flex items-center gap-1 text-sm font-light tracking-widest uppercase text-foreground/70 hover:text-primary transition-colors">
                 {t('nav.transport')}
                 <ChevronDownIcon
                   className={`w-3.5 h-3.5 transition-transform duration-200 ${dropdownOpen ? 'rotate-180' : ''}`}
                 />
               </button>
               {dropdownOpen && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-52 bg-card border border-border rounded-sm shadow-xl py-1">
+                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-52 bg-white border border-border shadow-lg py-1">
                   {transportLinks.map(({ key, href }) => (
                     <Link
                       key={href}
                       href={href}
-                      className="block px-4 py-2.5 text-xs font-light tracking-widest uppercase text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                      className="block px-4 py-2.5 text-xs font-light tracking-widest uppercase text-foreground/70 hover:text-primary hover:bg-muted transition-colors"
                     >
                       {t(key)}
                     </Link>
@@ -89,14 +91,14 @@ export default function NavbarClient() {
 
             <Link
               href="/seguridad-privada"
-              className="text-sm font-light tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm font-light tracking-widest uppercase text-foreground/70 hover:text-primary transition-colors"
             >
               {t('nav.security')}
             </Link>
 
             <Link
               href="/contactanos"
-              className="text-sm font-light tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm font-light tracking-widest uppercase text-foreground/70 hover:text-primary transition-colors"
             >
               {t('nav.contact')}
             </Link>
@@ -107,7 +109,7 @@ export default function NavbarClient() {
             {/* Language toggle */}
             <button
               onClick={toggleLang}
-              className="text-xs font-light tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors border border-border px-2 py-1 rounded-sm"
+              className="text-xs font-light tracking-widest uppercase text-foreground/70 hover:text-primary transition-colors border border-border px-2 py-1"
             >
               {i18n.language === 'es' ? 'EN' : 'ES'}
             </button>
@@ -115,7 +117,7 @@ export default function NavbarClient() {
             {/* CTA */}
             <Link
               href="/contactanos"
-              className="hidden lg:inline-flex items-center px-5 py-2 bg-primary text-primary-foreground text-xs font-light tracking-widest uppercase hover:bg-brand-wine-light transition-colors rounded-sm"
+              className="hidden lg:inline-flex items-center px-5 py-2.5 bg-primary text-primary-foreground text-xs font-light tracking-widest uppercase hover:bg-secondary transition-colors"
             >
               {t('common.bookNow')}
             </Link>
@@ -123,7 +125,7 @@ export default function NavbarClient() {
             {/* Mobile menu button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden text-muted-foreground hover:text-foreground transition-colors"
+              className="lg:hidden text-foreground/70 hover:text-primary transition-colors"
             >
               {isOpen ? <XMarkIcon className="w-6 h-6" /> : <Bars3Icon className="w-6 h-6" />}
             </button>
@@ -133,18 +135,18 @@ export default function NavbarClient() {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="lg:hidden bg-card border-t border-border">
+        <div className="lg:hidden bg-white border-t border-border shadow-lg">
           <div className="px-4 py-6 space-y-1">
             <Link
               href="/"
               onClick={() => setIsOpen(false)}
-              className="block py-3 text-sm font-light tracking-widest uppercase text-muted-foreground hover:text-foreground border-b border-border"
+              className="block py-3 text-sm font-light tracking-widest uppercase text-foreground/70 hover:text-primary border-b border-border"
             >
               {t('nav.home')}
             </Link>
 
             <div className="py-3 border-b border-border">
-              <p className="text-sm font-light tracking-widest uppercase text-muted-foreground mb-2">
+              <p className="text-sm font-light tracking-widest uppercase text-foreground/70 mb-2">
                 {t('nav.transport')}
               </p>
               <div className="pl-4 space-y-1">
@@ -153,7 +155,7 @@ export default function NavbarClient() {
                     key={href}
                     href={href}
                     onClick={() => setIsOpen(false)}
-                    className="block py-2 text-xs font-light tracking-widest uppercase text-muted-foreground hover:text-foreground"
+                    className="block py-2 text-xs font-light tracking-widest uppercase text-foreground/60 hover:text-primary"
                   >
                     {t(key)}
                   </Link>
@@ -164,7 +166,7 @@ export default function NavbarClient() {
             <Link
               href="/seguridad-privada"
               onClick={() => setIsOpen(false)}
-              className="block py-3 text-sm font-light tracking-widest uppercase text-muted-foreground hover:text-foreground border-b border-border"
+              className="block py-3 text-sm font-light tracking-widest uppercase text-foreground/70 hover:text-primary border-b border-border"
             >
               {t('nav.security')}
             </Link>
@@ -172,7 +174,7 @@ export default function NavbarClient() {
             <Link
               href="/contactanos"
               onClick={() => setIsOpen(false)}
-              className="block py-3 text-sm font-light tracking-widest uppercase text-muted-foreground hover:text-foreground border-b border-border"
+              className="block py-3 text-sm font-light tracking-widest uppercase text-foreground/70 hover:text-primary border-b border-border"
             >
               {t('nav.contact')}
             </Link>
@@ -181,7 +183,7 @@ export default function NavbarClient() {
               <Link
                 href="/contactanos"
                 onClick={() => setIsOpen(false)}
-                className="block text-center px-5 py-3 bg-primary text-primary-foreground text-xs font-light tracking-widest uppercase rounded-sm"
+                className="block text-center px-5 py-3 bg-primary text-primary-foreground text-xs font-light tracking-widest uppercase"
               >
                 {t('common.bookNow')}
               </Link>

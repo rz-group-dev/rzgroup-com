@@ -47,7 +47,7 @@ export default function ServicesSection() {
   const { t } = useTranslation();
 
   return (
-    <section id="servicios" className="py-24">
+    <section id="servicios" className="py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-16">
@@ -67,8 +67,8 @@ export default function ServicesSection() {
               href={href}
               className="group bg-background p-10 flex flex-col gap-6 hover:bg-card transition-colors"
             >
-              <div className="w-10 h-10 text-primary">
-                <Icon className="w-full h-full" strokeWidth={1} />
+              <div className="w-9 h-9 text-primary">
+                <Icon className="w-full h-full" strokeWidth={1.25} />
               </div>
 
               <div className="flex-1">
@@ -87,8 +87,8 @@ export default function ServicesSection() {
             </Link>
           ))}
 
-          {/* Filler cell to complete grid */}
-          <div className="hidden lg:block bg-card p-10" aria-hidden />
+          {/* Filler para completar grid de 3 */}
+          <div className="hidden lg:block bg-muted" aria-hidden />
         </div>
       </div>
     </section>

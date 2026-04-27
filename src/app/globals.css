@@ -48,60 +48,74 @@
   --radius-4xl: calc(var(--radius) * 2.6);
   /* Brand tokens */
   --color-brand-wine: var(--brand-wine);
-  --color-brand-wine-light: var(--brand-wine-light);
   --color-brand-green: var(--brand-green);
-  --color-brand-gray-dark: var(--brand-gray-dark);
+  --color-brand-black: var(--brand-black);
+  --color-brand-gray: var(--brand-gray);
   --color-brand-gray-light: var(--brand-gray-light);
 }
 
 :root {
-  /* RZ Group brand — luxury dark theme */
-  --background: oklch(0.09 0 0);
-  --foreground: oklch(0.95 0 0);
-  --card: oklch(0.12 0 0);
-  --card-foreground: oklch(0.95 0 0);
-  --popover: oklch(0.13 0 0);
-  --popover-foreground: oklch(0.95 0 0);
-  /* Primary: vino / borgoña */
-  --primary: oklch(0.42 0.14 12);
-  --primary-foreground: oklch(0.97 0 0);
-  /* Secondary: verde militar */
-  --secondary: oklch(0.32 0.05 145);
-  --secondary-foreground: oklch(0.97 0 0);
-  --muted: oklch(0.17 0 0);
-  --muted-foreground: oklch(0.60 0 0);
-  --accent: oklch(0.42 0.14 12);
-  --accent-foreground: oklch(0.97 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(1 0 0 / 8%);
-  --input: oklch(1 0 0 / 10%);
-  --ring: oklch(0.42 0.14 12);
-  --chart-1: oklch(0.42 0.14 12);
-  --chart-2: oklch(0.32 0.05 145);
-  --chart-3: oklch(0.38 0 0);
-  --chart-4: oklch(0.25 0 0);
-  --chart-5: oklch(0.15 0 0);
-  --radius: 0.375rem;
-  --sidebar: oklch(0.11 0 0);
-  --sidebar-foreground: oklch(0.95 0 0);
-  --sidebar-primary: oklch(0.42 0.14 12);
-  --sidebar-primary-foreground: oklch(0.97 0 0);
-  --sidebar-accent: oklch(0.17 0 0);
-  --sidebar-accent-foreground: oklch(0.95 0 0);
-  --sidebar-border: oklch(1 0 0 / 8%);
-  --sidebar-ring: oklch(0.42 0.14 12);
-  /* Brand tokens */
-  --brand-wine: oklch(0.42 0.14 12);
-  --brand-wine-light: oklch(0.52 0.14 12);
-  --brand-green: oklch(0.32 0.05 145);
-  --brand-gray-dark: oklch(0.38 0 0);
-  --brand-gray-light: oklch(0.72 0 0);
-}
+  /* ── RZ Group brand palette ──────────────────────────────
+     Primarios:   #5b201f (vino)  #070d0f (negro)  #3c473e (verde)
+     Secundarios: #515050 (gris)  #b2b1b1 (gris claro)
+     Fondo:       #f9f9ff
+  ──────────────────────────────────────────────────────── */
 
-/* Dark class kept for compatibility but :root is already dark */
-.dark {
-  --background: oklch(0.10 0 0);
-  --foreground: oklch(0.96 0 0);
+  /* Layout */
+  --background:         #f9f9ff;
+  --foreground:         #070d0f;
+  --card:               #ffffff;
+  --card-foreground:    #070d0f;
+  --popover:            #ffffff;
+  --popover-foreground: #070d0f;
+
+  /* Primary: vino #5b201f */
+  --primary:            #5b201f;
+  --primary-foreground: #f9f9ff;
+
+  /* Secondary: verde militar #3c473e */
+  --secondary:            #3c473e;
+  --secondary-foreground: #f9f9ff;
+
+  /* Muted / neutrales */
+  --muted:            #f0f0f5;
+  --muted-foreground: #515050;
+
+  /* Accent: vino (mismo que primary para CTAs) */
+  --accent:            #5b201f;
+  --accent-foreground: #f9f9ff;
+
+  /* Utilidades */
+  --destructive: oklch(0.577 0.245 27.325);
+  --border:      #b2b1b1;
+  --input:       #b2b1b1;
+  --ring:        #5b201f;
+
+  --radius: 0.25rem;
+
+  /* Sidebar */
+  --sidebar:                    #070d0f;
+  --sidebar-foreground:         #f9f9ff;
+  --sidebar-primary:            #5b201f;
+  --sidebar-primary-foreground: #f9f9ff;
+  --sidebar-accent:             #3c473e;
+  --sidebar-accent-foreground:  #f9f9ff;
+  --sidebar-border:             #515050;
+  --sidebar-ring:               #5b201f;
+
+  /* Charts */
+  --chart-1: #5b201f;
+  --chart-2: #3c473e;
+  --chart-3: #515050;
+  --chart-4: #b2b1b1;
+  --chart-5: #070d0f;
+
+  /* Brand tokens directos (hex para uso en inline styles si se necesita) */
+  --brand-wine:       #5b201f;
+  --brand-green:      #3c473e;
+  --brand-black:      #070d0f;
+  --brand-gray:       #515050;
+  --brand-gray-light: #b2b1b1;
 }
 
 @layer base {

@@ -13,23 +13,23 @@ export default function StatsSection() {
   const { t } = useTranslation();
 
   return (
-    <section className="border-y border-border bg-card">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <section className="bg-[#070d0f] border-t border-white/8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4">
           {stats.map((stat, i) => (
             <div
               key={stat.key}
-              className={`flex flex-col items-center justify-center py-8 px-6 text-center ${
-                i < stats.length - 1 ? 'lg:border-r border-border' : ''
-              } ${i % 2 === 0 ? 'border-r lg:border-r-0' : ''} ${
-                i < 2 ? 'border-b lg:border-b-0' : ''
+              className={`flex flex-col items-center justify-center py-12 px-6 text-center ${
+                i < stats.length - 1 ? 'lg:border-r border-white/8' : ''
+              } ${i % 2 === 0 ? 'border-r lg:border-r-0 border-white/8' : ''} ${
+                i < 2 ? 'border-b lg:border-b-0 border-white/8' : ''
               }`}
             >
               <span className="text-4xl sm:text-5xl font-light text-primary tabular-nums">
                 {stat.value}
                 <span className="text-2xl">{stat.unit}</span>
               </span>
-              <span className="mt-2 text-xs font-light tracking-[0.25em] uppercase text-muted-foreground">
+              <span className="mt-2 text-xs font-light tracking-[0.25em] uppercase text-white/50">
                 {t(stat.key)}
               </span>
             </div>
