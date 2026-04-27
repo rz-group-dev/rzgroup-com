@@ -12,17 +12,28 @@
     "hero": {
       "title": "VIP Transport and High-Profile Private Security",
       "subtitle": "Passenger transport services oriented to tourists and major companies, generating experiences that guarantee a high-category, safe and reliable service.",
-      "cta": "Request a quote"
+      "cta": "Request a quote",
+      "ctaSecondary": "Explore our services"
     },
     "stats": {
-      "years": "10 years of experience",
-      "cities": "10 cities",
-      "clients": "+1000 clients",
-      "availability": "24/7 availability"
+      "years": "Years of experience",
+      "cities": "Cities",
+      "clients": "Satisfied clients",
+      "availability": "Availability"
     },
     "services": {
       "title": "Our Services",
+      "subtitle": "Designed for those who demand the best in every transfer.",
       "learnMore": "Learn more"
+    },
+    "fleet": {
+      "title": "Our Fleet",
+      "subtitle": "State-of-the-art vehicles for your comfort and safety."
+    },
+    "cta": {
+      "title": "Ready for a luxury experience?",
+      "subtitle": "Contact us and we will design the perfect service for you.",
+      "button": "Request a quote"
     }
   },
   "services": {
@@ -48,7 +59,11 @@
     }
   },
   "fleet": {
-    "title": "Our Fleet"
+    "title": "Our Fleet",
+    "luxury": "Luxury",
+    "executive": "Executive",
+    "van": "Executive Van",
+    "premium": "Premium"
   },
   "contact": {
     "title": "Contact Us",
