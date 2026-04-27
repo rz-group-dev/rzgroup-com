@@ -22,18 +22,29 @@ Inspeccionar el sitio rzgroupsas.com y crear páginas nuevas según lo que aprue
 - Footer: multi-columna con links de servicios, contacto, política de datos, cookies
 - Vehículos de flota: Chevrolet Tahoe Z71, Mercedes Sprinter, Ford Explorer, Toyota TXL, Ford Expedition
 
-## Codebase
-- Directorio vacío — proyecto nuevo por construir
-- Stack objetivo: Next.js App Router + Tailwind + shadcn/ui + TypeScript + i18n (es.json / en.json)
+## Identidad de marca
+- Color primario: vino/borgoña — oklch(0.42 0.14 12)
+- Color secundario: verde militar — oklch(0.32 0.05 145)
+- Gris oscuro: oklch(0.38 0 0) | Gris claro: oklch(0.72 0 0)
+- Fuente cuerpo: Jost (equivalente a Avenir Light) — Google Fonts
+- Fuente display "RZ": Valorant (renderizado en CSS con tracking-widest + bold)
+- Logo: ›RZ GROUP / Exclusive Transportation S.A.S.
 
-## Propuesta
-- Página nueva: por definir — esperando instrucción del usuario
-- Ruta: 
-- Estado: pendiente de aprobación
+## Codebase
+- Stack: Next.js App Router + Tailwind + shadcn/ui + TypeScript + react-i18next
+- Repo: https://github.com/diego-martinez-dev/rzgroup-com (privado)
 
 ## Decisiones tomadas
-- CLAUDE.md y memory.md inicializados
+- CLAUDE.md y memory.md inicializados (2026-04-27)
 - Inspección del sitio en vivo completada (2026-04-27)
+- Repo GitHub creado y stack base instalado (2026-04-27)
+- globals.css con tema luxury dark y paleta de marca real (2026-04-27)
+- Navbar (sticky, dropdown Transporte, toggle ES/EN, mobile hamburger) (2026-04-27)
+- Footer (4 columnas: logo+tagline, servicios, Bogotá, Nueva York) (2026-04-27)
+- Fuente Jost (Avenir equivalente) configurada como --font-sans
 
 ## Pendientes
-- Recibir instrucción del usuario sobre qué página o sección crear
+- Homepage (hero, stats, servicios, flota, CTA)
+- Páginas de servicio: /transporte-luxury, /transporte-confort, /transporte-aereo
+- /seguridad-privada
+- /contactanos
