@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import { ArrowDownIcon } from '@heroicons/react/24/outline';
@@ -9,6 +10,17 @@ export default function HeroSection() {
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-[#070d0f]">
+      {/* Background image */}
+      <Image
+        src="/images/hero/Homepage_image.svg"
+        alt=""
+        fill
+        priority
+        className="object-cover object-center"
+        aria-hidden
+      />
+      {/* Dark overlay for text legibility */}
+      <div className="absolute inset-0 bg-[#070d0f]/70" />
       {/* Warm gradient overlay */}
       <div
         className="absolute inset-0"

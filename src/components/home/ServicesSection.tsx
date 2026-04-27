@@ -8,6 +8,7 @@ import {
   PaperAirplaneIcon,
   ShieldCheckIcon,
   BriefcaseIcon,
+  KeyIcon,
 } from '@heroicons/react/24/outline';
 
 const services = [
@@ -40,6 +41,12 @@ const services = [
     titleKey: 'services.travel.title',
     descKey: 'services.travel.description',
     href: '/contactanos',
+  },
+  {
+    icon: KeyIcon,
+    titleKey: 'services.suv.title',
+    descKey: 'services.suv.description',
+    href: '/renting-suv',
   },
 ];
 
@@ -87,8 +94,6 @@ export default function ServicesSection() {
             </Link>
           ))}
 
-          {/* Filler para completar grid de 3 */}
-          <div className="hidden lg:block bg-muted" aria-hidden />
         </div>
       </div>
     </section>

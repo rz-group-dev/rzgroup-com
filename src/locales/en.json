@@ -1,11 +1,13 @@
 {
   "nav": {
     "home": "Home",
+    "services": "Our Services",
     "transport": "Transport",
     "transportLuxury": "Luxury Transport",
     "transportComfort": "Comfort Transport",
     "transportAir": "Air Transport",
     "security": "Private Security",
+    "suvRental": "SUV Rental",
     "contact": "Contact Us"
   },
   "home": {
@@ -17,7 +19,7 @@
     },
     "stats": {
       "years": "Years of experience",
-      "cities": "Cities",
+      "countries": "Countries",
       "clients": "Satisfied clients",
       "availability": "Availability"
     },
@@ -56,6 +58,10 @@
     "travel": {
       "title": "Travel Management",
       "description": "Dedicated assistance for comprehensive coordination of your transfers."
+    },
+    "suv": {
+      "title": "SUV Rental",
+      "description": "Premium SUV rental with or without driver, for corporate, tourism, or personal use."
     }
   },
   "fleet": {

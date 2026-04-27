@@ -1,11 +1,13 @@
 {
   "nav": {
     "home": "Inicio",
+    "services": "Nuestros servicios",
     "transport": "Transporte",
     "transportLuxury": "Transporte Luxury",
     "transportComfort": "Transporte Confort",
     "transportAir": "Transporte Aéreo",
     "security": "Seguridad Privada",
+    "suvRental": "Renting de SUV",
     "contact": "Contáctanos"
   },
   "home": {
@@ -17,7 +19,7 @@
     },
     "stats": {
       "years": "Años de experiencia",
-      "cities": "Ciudades",
+      "countries": "Países",
       "clients": "Clientes satisfechos",
       "availability": "Disponibilidad"
     },
@@ -56,6 +58,10 @@
     "travel": {
       "title": "Gestión de Viajes",
       "description": "Asistencia dedicada para la coordinación integral de sus traslados."
+    },
+    "suv": {
+      "title": "Renting de SUV",
+      "description": "Alquiler de camionetas SUV de alta gama con o sin conductor, para uso corporativo, turístico o personal."
     }
   },
   "fleet": {
@@ -89,7 +95,7 @@
     "cookies": "Política de cookies"
   },
   "common": {
-    "bookNow": "Reserva ahora",
+    "bookNow": "Reserva Ahora",
     "learnMore": "Ver más",
     "loading": "Cargando...",
     "error": "Algo salió mal. Intenta de nuevo."

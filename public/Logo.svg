@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1199.19 342.79">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill: #282727;
+      }
+
+      .cls-5 {
+        letter-spacing: .4em;
+      }
+
+      .cls-6 {
+        letter-spacing: .42em;
+      }
+
+      .cls-7 {
+        letter-spacing: .42em;
+      }
+
+      .cls-2 {
+        font-family: Avenir-Roman, Avenir;
+        font-size: 31.92px;
+      }
+
+      .cls-3 {
+        font-family: VALORANT-Regular, VALORANT;
+        font-size: 226.05px;
+        letter-spacing: -.02em;
+      }
+
+      .cls-4 {
+        font-family: Avenir-Light, Avenir;
+        font-size: 210.08px;
+        letter-spacing: 0em;
+      }
+
+      .cls-8 {
+        letter-spacing: .33em;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="cls-1" d="M42.6,219.2c-.45,0-.82-.2-1.14-.59-.31-.4-.47-.87-.47-1.44v-24.84c0-1.58,.4-2.99,1.2-4.23l21.13-34.98-30.23-49.85c-.27-.56-.29-1.1-.07-1.61,.22-.51,.56-.76,1-.76h16.99c1.78,0,3.26,.9,4.41,2.7l29.29,48.16c.63,.9,.63,1.75,0,2.54l-26.35,43.43-15.78,21.46Z"/>
+    <text class="cls-3" transform="translate(101.25 232.24) scale(.95 1)"><tspan x="0" y="0">RZ</tspan></text>
+    <text class="cls-4" transform="translate(383.82 227.08) scale(.95 1)"><tspan x="0" y="0">GROUP</tspan></text>
+  </g>
+  <text class="cls-2" transform="translate(114.75 280.84)"><tspan class="cls-6" x="0" y="0">EXCLUSIVE TRANSPO</tspan><tspan class="cls-5" x="549.12" y="0">R</tspan><tspan class="cls-8" x="581.43" y="0">TA</tspan><tspan class="cls-7" x="643.1" y="0">TION S.A.S.</tspan></text>
+</svg>
