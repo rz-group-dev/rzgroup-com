@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "home": "Home",
+    "transport": "Transport",
+    "transportLuxury": "Luxury Transport",
+    "transportComfort": "Comfort Transport",
+    "transportAir": "Air Transport",
+    "security": "Private Security",
+    "contact": "Contact Us"
+  },
+  "home": {
+    "hero": {
+      "title": "VIP Transport and High-Profile Private Security",
+      "subtitle": "Passenger transport services oriented to tourists and major companies, generating experiences that guarantee a high-category, safe and reliable service.",
+      "cta": "Request a quote"
+    },
+    "stats": {
+      "years": "10 years of experience",
+      "cities": "10 cities",
+      "clients": "+1000 clients",
+      "availability": "24/7 availability"
+    },
+    "services": {
+      "title": "Our Services",
+      "learnMore": "Learn more"
+    }
+  },
+  "services": {
+    "luxury": {
+      "title": "Luxury Transport",
+      "description": "Professional drivers with state-of-the-art vehicles for an exceptional travel experience."
+    },
+    "comfort": {
+      "title": "Comfort Transport",
+      "description": "World-class driver service with quality and safety standards."
+    },
+    "air": {
+      "title": "Air Transport",
+      "description": "Helicopters and private jets for fast and exclusive transfers."
+    },
+    "security": {
+      "title": "Private Security",
+      "description": "Bodyguards and specialists with military experience for your protection."
+    },
+    "travel": {
+      "title": "Travel Management",
+      "description": "Dedicated assistance for comprehensive coordination of your transfers."
+    }
+  },
+  "fleet": {
+    "title": "Our Fleet"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "bogota": "Bogotá",
+    "newYork": "New York",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "form": {
+      "name": "Full name",
+      "email": "Email address",
+      "phone": "Phone",
+      "service": "Service of interest",
+      "message": "Message",
+      "submit": "Send request",
+      "success": "Message sent successfully! We will contact you soon.",
+      "error": "An error occurred. Please try again."
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "privacy": "Privacy policy",
+    "cookies": "Cookie policy"
+  },
+  "common": {
+    "bookNow": "Book now",
+    "learnMore": "Learn more",
+    "loading": "Loading...",
+    "error": "Something went wrong. Please try again."
+  }
+}
