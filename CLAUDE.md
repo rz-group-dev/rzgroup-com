@@ -94,11 +94,14 @@ Navbar y Footer en `src/components/layout/`.
 Patrón estándar en `src/components/services/<Nombre>Page.tsx`:
 1. Hero — `min-h-screen bg-[#070d0f]`, overlay `opacity-20`, texto blanco, CTA vinotinto `rounded-2xl`
 2. Descripción + features — `bg-[#f9f9fe]`, grid 2 cols (texto izq, features der)
-3. Modalidades — `bg-[#f9f9fe]`
+3. Modalidades — `bg-[#f9f9fe]` (solo en páginas distintas a luxury)
 4. Flota — `bg-white`
 5. CTA final — `bg-primary` (vinotinto), botón blanco → `/reservas`
 
-- `/transporte-luxury` — hero image: `public/images/hero/transporte_luxury.svg`; flota propia en `public/images/fleet/luxury_page/` (no compartida con homepage)
+- `/transporte-luxury` — estructura propia: sin sección Modalidades; flota via `FleetGallery.tsx` (slider interactivo con thumbnails); hero image: `public/images/hero/transporte_luxury.svg`; imágenes de flota en `public/images/fleet/Luxury_page/` (case-sensitive)
+- `FleetGallery.tsx` — slider con estado `selected`, thumbnails scrollables, soporte para múltiples imágenes por vehículo (`images[]`). Si `images.length > 1`: layout `grid-cols-[3fr_2fr]` con 3 fotos a la derecha.
+- `RelatedServices.tsx` — componente compartido, fondo `#f9f9fe`, texto oscuro. Excluye el servicio actual.
+- Textura de fondo: `public/images/textures/Textura.svg`
 - Todos los botones del sitio usan `rounded-2xl`
 - Footer tagline: clave independiente `footer.tagline` (no comparte con hero)
 

@@ -59,12 +59,12 @@ export default function RelatedServices({ exclude }: Props) {
   const services = ALL_SERVICES.filter((s) => s.id !== exclude).slice(0, 3);
 
   return (
-    <section className="py-24 bg-[#070d0f] px-4">
+    <section className="py-24 bg-[#f9f9fe] px-4">
       <div className="max-w-4xl mx-auto">
         <p className="text-primary text-xs font-light tracking-[0.4em] uppercase mb-4">
           ›&nbsp;&nbsp;{t('common.relatedServices')}
         </p>
-        <h2 className="text-3xl sm:text-4xl font-light text-white tracking-tight mb-14">
+        <h2 className="text-3xl sm:text-4xl font-light text-foreground tracking-tight mb-14">
           {t('common.relatedServicesTitle')}
         </h2>
 
@@ -73,12 +73,12 @@ export default function RelatedServices({ exclude }: Props) {
             <Link
               key={s.id}
               href={s.href}
-              className="group border border-white/10 hover:border-primary p-8 transition-colors flex flex-col gap-5"
+              className="group border border-foreground/10 hover:border-primary p-8 transition-colors flex flex-col gap-5"
             >
               <div className="text-primary">{s.icon}</div>
               <div>
-                <h3 className="text-sm font-light text-white mb-2">{t(s.titleKey)}</h3>
-                <p className="text-xs font-light text-white/40 leading-relaxed">{t(s.descKey)}</p>
+                <h3 className="text-sm font-light text-foreground mb-2">{t(s.titleKey)}</h3>
+                <p className="text-xs font-light text-foreground/40 leading-relaxed">{t(s.descKey)}</p>
               </div>
               <div className="mt-auto flex items-center gap-2 text-primary text-xs font-light tracking-widest group-hover:gap-3 transition-all">
                 {t('common.learnMore')}

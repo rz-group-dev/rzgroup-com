@@ -97,12 +97,14 @@ Next.js App Router + Tailwind + shadcn/ui + TypeScript + react-i18next (ES/EN)
 
 ## Páginas de servicio (`src/components/services/`)
 Todas siguen la misma estructura: hero oscuro (#070d0f) + descripción/features (#f9f9fe) + flota o modalidades (blanco/#f9f9fe) + CTA vinotinto.
-- `LuxuryPage.tsx` → `/transporte-luxury`
+- `LuxuryPage.tsx` → `/transporte-luxury` — sin sección Modalidades; flota via `FleetGallery.tsx`
 - `ComfortPage.tsx` → `/transporte-confort`
 - `SecurityPage.tsx` → `/seguridad-privada`
 - `RentACarPage.tsx` → `/rent-a-car`
 - `AirTransportPage.tsx` → `/transporte-aereo`
-- `RelatedServices.tsx` → componente compartido, excluye el servicio actual, fondo `#070d0f`
+- `RelatedServices.tsx` → componente compartido, excluye el servicio actual, fondo `#f9f9fe` (texto oscuro)
+- `FleetGallery.tsx` → slider interactivo de flota luxury con thumbnails scrollables. Imágenes en `public/images/fleet/Luxury_page/` (case-sensitive — Linux/Vercel)
+- Textura de fondo disponible en `public/images/textures/Textura.svg`
 
 ## Homepage — Fleet sections
 - Flota Luxury y Confort: fila horizontal scrollable (`overflow-x-auto`) con `useRef` y `scrollBy(320)`
