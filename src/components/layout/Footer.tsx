@@ -54,7 +54,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-white/50 text-sm font-light leading-relaxed">
-              {t('home.hero.subtitle')}
+              {t('footer.tagline')}
             </p>
           </div>
 

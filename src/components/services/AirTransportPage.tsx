@@ -82,7 +82,7 @@ export default function AirTransportPage() {
           </p>
           <Link
             href="/reservas"
-            className="inline-flex items-center px-10 py-4 bg-primary text-white text-xs font-light tracking-widest hover:bg-primary/80 transition-colors"
+            className="inline-flex items-center px-10 py-4 bg-primary text-white text-xs font-light tracking-widest hover:bg-primary/80 transition-colors rounded-2xl"
           >
             {t('airTransport.heroCta')}
           </Link>
@@ -157,7 +157,7 @@ export default function AirTransportPage() {
           </p>
           <Link
             href="/reservas"
-            className="inline-flex items-center px-10 py-4 bg-white text-primary text-xs font-light tracking-widest hover:bg-white/90 transition-colors"
+            className="inline-flex items-center px-10 py-4 bg-white text-primary text-xs font-light tracking-widest hover:bg-white/90 transition-colors rounded-2xl"
           >
             {t('airTransport.ctaButton')}
           </Link>

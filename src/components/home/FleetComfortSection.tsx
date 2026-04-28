@@ -27,10 +27,10 @@ export default function FleetComfortSection() {
         {/* Header */}
         <div className="mb-16 flex items-end justify-between">
           <div>
-            <p className="text-primary text-xs font-light tracking-[0.4em] uppercase mb-4">
+            <p className="text-primary text-base font-light tracking-[0.4em] uppercase mb-4">
               ›&nbsp;&nbsp;{t('fleet.titleComfort')}
             </p>
-            <h2 className="text-3xl sm:text-6xl font-light text-foreground tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-light text-foreground tracking-tight max-w-lg">
               {t('fleet.subtitleComfort')}
             </h2>
           </div>
@@ -96,7 +96,7 @@ export default function FleetComfortSection() {
         <div className="mt-12 text-center">
           <Link
             href="/reservas"
-            className="inline-flex items-center px-8 py-4 bg-primary text-primary-foreground text-xs font-light tracking-widest hover:bg-primary/80 transition-colors"
+            className="inline-flex items-center px-8 py-4 bg-primary text-primary-foreground text-xs font-light tracking-widest hover:bg-primary/80 transition-colors rounded-2xl"
           >
             {t('common.bookNow')}
           </Link>

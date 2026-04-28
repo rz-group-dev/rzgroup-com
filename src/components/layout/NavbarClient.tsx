@@ -63,7 +63,7 @@ export default function NavbarClient() {
             {/* CTA */}
             <Link
               href="/reservas"
-              className="inline-flex items-center px-5 py-2.5 bg-primary text-primary-foreground text-xs font-light tracking-widest hover:bg-secondary transition-colors"
+              className="inline-flex items-center px-5 py-2.5 bg-primary text-primary-foreground text-xs font-light tracking-widest hover:bg-[#774a48] transition-colors rounded-2xl"
             >
               {t('common.bookNow')}
             </Link>
@@ -71,7 +71,7 @@ export default function NavbarClient() {
             {/* Language toggle */}
             <button
               onClick={toggleLang}
-              className="text-xs font-light tracking-widest text-white/80 hover:text-primary transition-colors border border-white/30 px-2 py-1"
+              className="text-xs font-light tracking-widest text-white/80 hover:bg-[#774a48] transition-colors border border-white/30 px-2 py-1"
             >
               {i18n.language === 'es' ? 'EN' : 'ES'}
             </button>

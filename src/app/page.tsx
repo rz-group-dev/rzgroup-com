@@ -19,7 +19,9 @@ export default function HomePage() {
       <StatsSection />
       <ServicesSection />
       <FleetSection />
+      <div className="h-px bg-primary mx-4 sm:mx-6 lg:mx-8" />
       <FleetComfortSection />
+      <div className="h-px bg-primary mx-4 sm:mx-6 lg:mx-8" />
       <CoverageSection />
     </>
   );

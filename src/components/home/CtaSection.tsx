@@ -36,13 +36,13 @@ export default function CtaSection() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href="/contactanos"
-            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-primary text-xs font-light tracking-[0.3em] uppercase hover:bg-white/90 transition-colors"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-primary text-xs font-light tracking-[0.3em] uppercase hover:bg-white/90 transition-colors rounded-2xl"
           >
             {t('home.cta.button')}
           </Link>
           <a
             href="tel:+573115904808"
-            className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/30 text-white text-xs font-light tracking-[0.3em] uppercase hover:border-white transition-colors"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/30 text-white text-xs font-light tracking-[0.3em] uppercase hover:border-white transition-colors rounded-2xl"
           >
             <PhoneIcon className="w-4 h-4" />
             +57 311 590 4808

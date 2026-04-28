@@ -147,7 +147,7 @@ export default function BookingForm() {
           </p>
           <Link
             href="/"
-            className="inline-flex items-center px-8 py-4 bg-primary text-white text-xs font-light tracking-widest hover:bg-primary/80 transition-colors"
+            className="inline-flex items-center px-8 py-4 bg-primary text-white text-xs font-light tracking-widest hover:bg-primary/80 transition-colors rounded-2xl"
           >
             {t('booking.backHome')}
           </Link>

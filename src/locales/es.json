@@ -13,7 +13,7 @@
   "home": {
     "hero": {
       "title": "Transporte VIP en LATAM y Estados Unidos",
-      "subtitle": "Servicio de transporte de pasajeros en LATAM. Contamos con vehículos VIP y vehículos comfort.",
+      "subtitle": "Servicio de transporte privado en LATAM y Estados Unidos. Contamos con vehículos VIP y vehículos comfort.",
       "cta": "Reserva ahora",
       "ctaSecondary": "Conoce nuestros servicios"
     },
@@ -41,11 +41,11 @@
   "services": {
     "luxury": {
       "title": "Transporte Luxury",
-      "description": "Conductores profesionales con vehículos de última generación para una experiencia de viaje excepcional."
+      "description": "Conductores profesionales con vehículos gama alta para una experiencia de viaje excepcional."
     },
     "comfort": {
       "title": "Transporte Confort",
-      "description": "Servicio de conductor a nivel mundial con estándares de calidad y seguridad."
+      "description": "Servicio de conductor privado con estándares de calidad y seguridad."
     },
     "air": {
       "title": "Transporte Aéreo",
@@ -53,7 +53,7 @@
     },
     "security": {
       "title": "Seguridad Privada",
-      "description": "Guardaespaldas y especialistas con experiencia militar para su protección."
+      "description": "Guardaespaldas y seguridad privada para su tranquilidad."
     },
     "travel": {
       "title": "Gestión de Viajes",
@@ -61,14 +61,14 @@
     },
     "suv": {
       "title": "Rent a Car",
-      "description": "Alquiler de camionetas SUV de alta gama con o sin conductor, para uso corporativo, turístico o personal."
+      "description": "Alquiler de SUV de alta gama, para uso corporativo, turístico o personal."
     }
   },
   "fleet": {
     "title": "Nuestra Flota Luxury",
-    "subtitle": "Vehículos de última generación para su comodidad y seguridad.",
+    "subtitle": "Vehículos de de gama alta para su comodidad y seguridad.",
     "titleComfort": "Nuestra Flota Confort",
-    "subtitleComfort": "Transporte grupal con estándares de calidad y seguridad.",
+    "subtitleComfort": "Transporte privado con conductores profesionales",
     "luxury": "Luxury",
     "executive": "Ejecutivo",
     "van": "Confort",
@@ -98,6 +98,7 @@
     "back": "Ver todos los países"
   },
   "footer": {
+    "tagline": "Empresa de transporte habilitada por el Ministerio de Transporte por la Republica de Colombia",
     "rights": "Todos los derechos reservados.",
     "privacy": "Política de privacidad",
     "cookies": "Política de cookies",

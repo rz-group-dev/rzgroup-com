@@ -58,10 +58,10 @@ export default function ServicesSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-16">
-          <p className="text-white/50 text-xs font-light tracking-[0.4em] uppercase mb-4">
+          <p className="text-white/50 text-base font-light tracking-[0.4em] uppercase mb-4">
             ›&nbsp;&nbsp;{t('home.services.title')}
           </p>
-          <h2 className="text-3xl sm:text-4xl font-light text-white tracking-tight max-w-lg">
+          <h2 className="text-2xl sm:text-3xl font-light text-white tracking-tight max-w-lg">
             {t('home.services.subtitle')}
           </h2>
         </div>

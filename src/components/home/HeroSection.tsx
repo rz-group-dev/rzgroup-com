@@ -42,11 +42,6 @@ export default function HeroSection() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-24 w-full">
         <div className="max-w-3xl">
-          {/* Eyebrow */}
-          <p className="text-primary text-xs font-light tracking-[0.4em] uppercase mb-8">
-            ›&nbsp;&nbsp;RZ Group — Exclusive Transportation S.A.S.
-          </p>
-
           {/* H1 */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-[4.5rem] font-light text-white leading-[1.1] tracking-tight mb-8">
             {t('home.hero.title')}
@@ -64,13 +59,13 @@ export default function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="/reservas"
-              className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground text-xs font-light tracking-[0.3em] uppercase hover:bg-secondary transition-colors rounded-sm"
+              className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground text-xs font-light tracking-[0.3em] uppercase hover:bg-[#774a48] transition-colors rounded-2xl"
             >
               {t('home.hero.cta')}
             </Link>
             <Link
               href="#servicios"
-              className="inline-flex items-center justify-center px-8 py-4 border border-white/20 text-white text-xs font-light tracking-[0.3em] uppercase hover:border-primary hover:text-primary transition-colors rounded-sm"
+              className="inline-flex items-center justify-center px-8 py-4 border border-white/20 text-white text-xs font-light tracking-[0.3em] uppercase hover:bg-[#774a48] transition-colors rounded-2xl"
             >
               {t('home.hero.ctaSecondary')}
             </Link>
@@ -80,7 +75,10 @@ export default function HeroSection() {
 
       {/* Scroll indicator */}
       <button
-        onClick={() => document.getElementById('stats')?.scrollIntoView({ behavior: 'smooth' })}
+        onClick={() => {
+          const el = document.getElementById('stats');
+          if (el) window.scrollTo({ top: el.offsetTop - 100, behavior: 'smooth' });
+        }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce cursor-pointer"
         aria-label="Scroll down"
       >

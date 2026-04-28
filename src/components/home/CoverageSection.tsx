@@ -124,10 +124,10 @@ export default function CoverageSection() {
 
         {/* Header */}
         <div className="mb-12">
-          <p className="text-primary text-xs font-light tracking-[0.4em] uppercase mb-4">
+          <p className="text-primary text-base font-light tracking-[0.4em] uppercase mb-4">
             ›&nbsp;&nbsp;{t('coverage.eyebrow')}
           </p>
-          <h2 className="text-3xl sm:text-4xl font-light text-foreground tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-light text-foreground tracking-tight">
             {t('coverage.title')}
           </h2>
         </div>
