@@ -42,10 +42,20 @@ StatsSection         → src/components/home/StatsSection.tsx
 ServicesSection      → src/components/home/ServicesSection.tsx
 FleetSection         → src/components/home/FleetSection.tsx         (Luxury)
 FleetComfortSection  → src/components/home/FleetComfortSection.tsx  (Confort)
-CtaSection           → src/components/home/CtaSection.tsx
+CoverageSection      → src/components/home/CoverageSection.tsx      (Mapa interactivo)
 ```
 
 Navbar y Footer en `src/components/layout/`.
+
+## Decisiones de diseño (homepage)
+
+- **ServicesSection** — fondo `bg-primary` (vinotinto), texto blanco. Grid separado con `bg-white/10`. Hover `bg-white/10`.
+- **FleetSection (Luxury)** — fondo `bg-[#f9f9fe]`, contenedores de imagen `bg-[#ffffff]`. Texto oscuro.
+- **FleetComfortSection** — fondo `bg-[#f9f9fe]`, contenedores de imagen `bg-[#ffffff]`. Texto oscuro.
+- **CoverageSection** — fondo `bg-[#f9f9fe]`, mapa con `react-simple-maps`. Países cubiertos en vinotinto (`#5b201f`), seleccionado en `#3d1515`. Pins y labels de ciudades con escala inversa al zoom (`scale(1/zoom)`).
+- **Footer** — fondo `#070d0f`. Logo SVG en blanco. Columnas: logo+tagline, Nuestras Redes (correo/Instagram/LinkedIn), Bogotá, Nueva York.
+- Imágenes de flota: SVGs con PNG embebido. Necesitan `bg-[#efefef]` o `bg-[#ffffff]` para verse — fondo blanco hace invisibles los elementos blancos del SVG.
+- Para screenshots en headless (puppeteer): hacer scroll por la página antes de capturar para activar lazy loading.
 
 ---
 

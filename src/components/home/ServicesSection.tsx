@@ -54,40 +54,40 @@ export default function ServicesSection() {
   const { t } = useTranslation();
 
   return (
-    <section id="servicios" className="py-24 bg-background">
+    <section id="servicios" className="py-24 bg-primary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-16">
-          <p className="text-primary text-xs font-light tracking-[0.4em] uppercase mb-4">
+          <p className="text-white/50 text-xs font-light tracking-[0.4em] uppercase mb-4">
             ›&nbsp;&nbsp;{t('home.services.title')}
           </p>
-          <h2 className="text-3xl sm:text-4xl font-light text-foreground tracking-tight max-w-lg">
+          <h2 className="text-3xl sm:text-4xl font-light text-white tracking-tight max-w-lg">
             {t('home.services.subtitle')}
           </h2>
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10">
           {services.map(({ icon: Icon, titleKey, descKey, href }) => (
             <Link
               key={href}
               href={href}
-              className="group bg-background p-10 flex flex-col gap-6 hover:bg-card transition-colors"
+              className="group bg-primary p-10 flex flex-col gap-6 hover:bg-white/10 transition-colors"
             >
-              <div className="w-9 h-9 text-primary">
+              <div className="w-9 h-9 text-white/70">
                 <Icon className="w-full h-full" strokeWidth={1.25} />
               </div>
 
               <div className="flex-1">
-                <h3 className="text-base font-light tracking-wide text-foreground mb-3">
+                <h3 className="text-base font-light tracking-wide text-white mb-3">
                   {t(titleKey)}
                 </h3>
-                <p className="text-sm font-light text-muted-foreground leading-relaxed">
+                <p className="text-sm font-light text-white/60 leading-relaxed">
                   {t(descKey)}
                 </p>
               </div>
 
-              <div className="flex items-center gap-2 text-xs font-light tracking-[0.25em] uppercase text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+              <div className="flex items-center gap-2 text-xs font-light tracking-[0.25em] uppercase text-white/50 opacity-0 group-hover:opacity-100 transition-opacity">
                 <span>{t('home.services.learnMore')}</span>
                 <span>›</span>
               </div>

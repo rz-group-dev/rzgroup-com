@@ -34,12 +34,12 @@ Next.js App Router + Tailwind + shadcn/ui + TypeScript + react-i18next (ES/EN)
 - `/contactanos` — Formulario y datos de contacto
 
 ## Estructura de la homepage (`src/app/page.tsx`)
-1. `HeroSection` — imagen de fondo `public/images/hero/Homepage_image.svg`
+1. `HeroSection` — imagen de fondo `public/images/hero/Homepage_image.svg`, overlay oscuro
 2. `StatsSection` — fondo `#f9f9fe`, números en color primario: 10+ años, 6 países, 24/7
-3. `ServicesSection` — 6 servicios incluyendo Renting de SUV
-4. `FleetSection` — Flota Luxury (fondo `#3c473e`)
-5. `FleetComfortSection` — Flota Confort (fondo `#2c2c2c`)
-6. `CtaSection`
+3. `ServicesSection` — fondo `bg-primary` (vinotinto), texto blanco, 6 servicios
+4. `FleetSection` — Flota Luxury, fondo `#f9f9fe`, contenedores imagen `#ffffff`
+5. `FleetComfortSection` — Flota Confort, fondo `#f9f9fe`, contenedores imagen `#ffffff`
+6. `CoverageSection` — Mapa interactivo react-simple-maps, fondo `#f9f9fe`
 
 ## Flota Luxury (`public/images/fleet/`)
 - Tahoe Z71, Tahoe LT, Cadillac Escalade, Mercedes Benz E250, Sprinter Blindada, Toyota Blindada
@@ -54,16 +54,28 @@ Next.js App Router + Tailwind + shadcn/ui + TypeScript + react-i18next (ES/EN)
 - Orden: `Reserva Ahora` (CTA) → toggle `EN/ES`
 - Dropdown "Nuestros servicios" con 5 links incluyendo Renting de SUV
 
+## Footer
+- Fondo `#070d0f`. Logo SVG en blanco (`brightness-0 invert`), tamaño 150×52px.
+- Columnas: logo+tagline | Nuestras Redes (correo, Instagram, LinkedIn) | Bogotá | Nueva York
+- Instagram: https://www.instagram.com/rzgroup_/
+- LinkedIn: https://www.linkedin.com/company/rz-group-co
+- Correo: reservas@rzgroupsas.com
+
+## Mapa de cobertura (CoverageSection)
+- Zoom y coordenadas aprobados — NO modificar sin permiso explícito
+- Ver memory file: `project_rzgroup_coverage_map.md`
+
 ## Reglas de git
 - `public/images/services/` está en `.gitignore` — archivos demasiado grandes para GitHub
-- Las imágenes de `fleet/`, `hero/` y `stats/` sí van a git (son SVGs ligeros)
-- Antes de push, verificar que no haya archivos mayores a 50MB con `du -sh public/images/**/*`
+- Las imágenes de `fleet/`, `hero/` y `stats/` sí van a git
+- Antes de push: `du -sh public/images/**/*` para verificar tamaños
+- Vercel requiere `.npmrc` con `legacy-peer-deps=true` por react-simple-maps (React 19)
 
 ## Decisiones técnicas
 - Logo SVG: texto convertido a paths/outlines para evitar dependencia de fuentes en producción
-- StatsSection: usa CSS `background-image` inline (no `<Image>` de Next.js) para SVG de fondo
-- Imágenes de flota: `object-contain` con `p-4` para que los SVGs se vean completos
-- Caché de Vercel: probar cambios en ventana incógnita antes de reportar problemas
+- Imágenes de flota: SVGs con PNG embebido (~700KB-1.5MB c/u). Usar `bg-[#ffffff]` en contenedor para que los elementos blancos sean visibles.
+- Lazy loading: imágenes de flota solo cargan al entrar al viewport — en puppeteer/headless hay que hacer scroll antes de capturar.
+- Caché del navegador: probar cambios en ventana incógnita
 
 ## Pendientes
 - Páginas de servicio individuales: /transporte-luxury, /transporte-confort, /transporte-aereo, /seguridad-privada, /renting-suv
