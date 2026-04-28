@@ -78,8 +78,8 @@ Navbar y Footer en `src/components/layout/`.
 
 ### Navbar
 - Fondo transparente → negro al hacer scroll (`isScrolled`)
-- En rutas con fondo claro (`OPAQUE_ROUTES`: `/reservas`, `/contactanos`), el fondo es negro desde el inicio via `usePathname()`
-- "Reserva Ahora" → `/reservas` | "Contáctanos" → `/contactanos`
+- `OPAQUE_ROUTES`: `/reservas`, `/contactanos`, `/politica-privacidad`, `/politica-cookies` — navbar negro desde el inicio
+- "Reserva Ahora" → `/reservas`
 
 ### Página de reservas (`/reservas`)
 - Componente: `src/components/reservas/BookingForm.tsx`
@@ -92,10 +92,15 @@ Navbar y Footer en `src/components/layout/`.
 
 ### Páginas de servicio
 Patrón estándar en `src/components/services/<Nombre>Page.tsx`:
-1. Hero — `min-h-screen bg-[#070d0f]`, overlay `opacity-20` con `Homepage_image.svg`, texto blanco, CTA vinotinto
+1. Hero — `min-h-screen bg-[#070d0f]`, overlay `opacity-20`, texto blanco, CTA vinotinto `rounded-2xl`
 2. Descripción + features — `bg-[#f9f9fe]`, grid 2 cols (texto izq, features der)
-3. Flota o modalidades — `bg-white` o `bg-[#f9f9fe]`
-4. CTA final — `bg-primary` (vinotinto), botón blanco → `/reservas`
+3. Modalidades — `bg-[#f9f9fe]`
+4. Flota — `bg-white`
+5. CTA final — `bg-primary` (vinotinto), botón blanco → `/reservas`
+
+- `/transporte-luxury` — hero image: `public/images/hero/transporte_luxury.svg`; flota propia en `public/images/fleet/luxury_page/` (no compartida con homepage)
+- Todos los botones del sitio usan `rounded-2xl`
+- Footer tagline: clave independiente `footer.tagline` (no comparte con hero)
 
 Páginas construidas: `/transporte-luxury`, `/transporte-confort`, `/seguridad-privada`, `/rent-a-car`, `/transporte-aereo`
 Legales: `/politica-privacidad`, `/politica-cookies`

@@ -27,7 +27,7 @@ Next.js App Router + Tailwind + shadcn/ui + TypeScript + react-i18next (ES/EN)
 ## Rutas existentes
 - `/` — Homepage
 - `/reservas` — Formulario de reservas con email via Resend
-- `/transporte-luxury` — Página de servicio: hero oscuro + descripción + flota + modalidades + servicios relacionados + CTA
+- `/transporte-luxury` — Página de servicio: hero oscuro + descripción + modalidades + flota + servicios relacionados + CTA
 - `/transporte-confort` — Página de servicio: misma estructura, flota confort
 - `/seguridad-privada` — Página de servicio: escolta personal, grupos, eventos
 - `/rent-a-car` — Página de servicio: SUV con/sin conductor
@@ -44,8 +44,12 @@ Next.js App Router + Tailwind + shadcn/ui + TypeScript + react-i18next (ES/EN)
 5. `FleetComfortSection` — Flota Confort, fondo `#f9f9fe`, contenedores imagen `#ffffff`
 6. `CoverageSection` — Mapa interactivo react-simple-maps, fondo `#f9f9fe`
 
-## Flota Luxury (`public/images/fleet/`)
+## Flota Luxury — Homepage (`public/images/fleet/`)
 - Tahoe Z71, Tahoe LT, Cadillac Escalade, Mercedes Benz E250, Sprinter Blindada, Toyota Blindada
+
+## Flota Luxury — Página `/transporte-luxury` (`public/images/fleet/luxury_page/`)
+- Tahoe Z71, Tahoe LT, Cadillac Escalade, Mercedes Benz E250, Sprinter Blindada, Sprinter, Toyota Prado Blindada, Ford Expedition
+- Hero image propio: `public/images/hero/transporte_luxury.svg`
 
 ## Flota Confort (`public/images/fleet/`)
 - Renault Duster (`Duster.png`), Hyundai H1, Mercedes Vito, Mercedes Sprinter, Bus 40 Pax
@@ -54,12 +58,13 @@ Next.js App Router + Tailwind + shadcn/ui + TypeScript + react-i18next (ES/EN)
 - Fondo transparente → negro (`bg-black`) al hacer scroll
 - Logo blanco (`brightness-0 invert`), tamaño 185×64px, header `h-24`
 - Texto siempre blanco
-- Orden: `Reserva Ahora` (CTA) → toggle `EN/ES`
-- Dropdown "Nuestros servicios" con 5 links — el último dice "Rent a Car" → `/rent-a-car`
-- `OPAQUE_ROUTES`: `/reservas`, `/contactanos` — navbar negro desde el inicio en esas rutas
+- Orden: `Reserva Ahora` (CTA) → toggle `EN/ES` → hamburger
+- Slide-in panel desde la derecha con 5 links de servicios + CTA
+- `OPAQUE_ROUTES`: `/reservas`, `/contactanos`, `/politica-privacidad`, `/politica-cookies`
 
 ## Footer
 - Fondo `#070d0f`. Logo SVG en blanco (`brightness-0 invert`), tamaño 150×52px.
+- Tagline: clave independiente `footer.tagline` (separada del hero subtitle)
 - Columnas: logo+tagline | Nuestras Redes (correo, Instagram, LinkedIn) | Bogotá | Nueva York
 - Instagram: https://www.instagram.com/rzgroup_/
 - LinkedIn: https://www.linkedin.com/company/rz-group-co
