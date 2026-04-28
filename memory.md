@@ -27,11 +27,13 @@ Next.js App Router + Tailwind + shadcn/ui + TypeScript + react-i18next (ES/EN)
 ## Rutas existentes
 - `/` — Homepage
 - `/reservas` — Formulario de reservas con email via Resend
-- `/transporte-luxury` — Página de servicio: hero oscuro + descripción + flota + modalidades + CTA
+- `/transporte-luxury` — Página de servicio: hero oscuro + descripción + flota + modalidades + servicios relacionados + CTA
 - `/transporte-confort` — Página de servicio: misma estructura, flota confort
 - `/seguridad-privada` — Página de servicio: escolta personal, grupos, eventos
-- `/rent-a-car` — Página de servicio: SUV con/sin conductor (antes `/renting-suv`, renombrado)
-- `/transporte-aereo` — Pendiente de construir
+- `/rent-a-car` — Página de servicio: SUV con/sin conductor
+- `/transporte-aereo` — Página de servicio: jets privados y helicópteros
+- `/politica-privacidad` — Política de tratamiento de datos (Ley 1581 de 2012)
+- `/politica-cookies` — Política de cookies
 - `/contactanos` — Pendiente de construir (formulario funcional)
 
 ## Estructura de la homepage (`src/app/page.tsx`)
@@ -94,6 +96,13 @@ Todas siguen la misma estructura: hero oscuro (#070d0f) + descripción/features 
 - `ComfortPage.tsx` → `/transporte-confort`
 - `SecurityPage.tsx` → `/seguridad-privada`
 - `RentACarPage.tsx` → `/rent-a-car`
+- `AirTransportPage.tsx` → `/transporte-aereo`
+- `RelatedServices.tsx` → componente compartido, excluye el servicio actual, fondo `#070d0f`
+
+## Homepage — Fleet sections
+- Flota Luxury y Confort: fila horizontal scrollable (`overflow-x-auto`) con `useRef` y `scrollBy(320)`
+- Indicador de scroll: overlay gradiente en el borde derecho con flecha animada (`@keyframes nudge`) clickeable
+- CTA "Reservar Ahora" al final de cada sección de flota
 
 ## Email — formulario de reservas
 - `src/app/api/reservas/route.ts` — POST → Resend SDK → email a `diego2392martinez@gmail.com` (pruebas)
@@ -101,6 +110,5 @@ Todas siguen la misma estructura: hero oscuro (#070d0f) + descripción/features 
 - **Pendiente:** Cambiar destinatario a `reservas@rzgroupsas.com` verificando dominio en Resend O usando Google Workspace SMTP (usuario tiene plan pago G Suite)
 
 ## Pendientes
-- `/transporte-aereo` — página de servicio (no construida)
 - `/contactanos` — formulario funcional
 - Email sender: decidir entre verificar dominio en Resend o cambiar a Google Workspace SMTP

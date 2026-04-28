@@ -97,8 +97,9 @@ Patrón estándar en `src/components/services/<Nombre>Page.tsx`:
 3. Flota o modalidades — `bg-white` o `bg-[#f9f9fe]`
 4. CTA final — `bg-primary` (vinotinto), botón blanco → `/reservas`
 
-Páginas construidas: `/transporte-luxury`, `/transporte-confort`, `/seguridad-privada`, `/rent-a-car`
-Pendientes: `/transporte-aereo`, `/contactanos`
+Páginas construidas: `/transporte-luxury`, `/transporte-confort`, `/seguridad-privada`, `/rent-a-car`, `/transporte-aereo`
+Legales: `/politica-privacidad`, `/politica-cookies`
+Pendiente: `/contactanos`
 
 ### Terminología
 - "Rent a Car" (no "Renting de SUV") — actualizado en nav, ServicesSection y traducciones
