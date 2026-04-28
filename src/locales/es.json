@@ -7,7 +7,7 @@
     "transportComfort": "Transporte Confort",
     "transportAir": "Transporte Aéreo",
     "security": "Seguridad Privada",
-    "suvRental": "Renting de SUV",
+    "suvRental": "Rent a Car",
     "contact": "Contáctanos"
   },
   "home": {
@@ -60,7 +60,7 @@
       "description": "Asistencia dedicada para la coordinación integral de sus traslados."
     },
     "suv": {
-      "title": "Renting de SUV",
+      "title": "Rent a Car",
       "description": "Alquiler de camionetas SUV de alta gama con o sin conductor, para uso corporativo, turístico o personal."
     }
   },
@@ -132,6 +132,60 @@
     "successTitle": "¡Gracias por tu solicitud!",
     "successDesc": "Hemos recibido tu solicitud de reserva. Un asesor se comunicará contigo en menos de 24 horas para confirmar los detalles.",
     "backHome": "Volver al inicio"
+  },
+  "security": {
+    "eyebrow": "Seguridad Privada",
+    "heroTitle": "Protección discreta para quienes más lo necesitan",
+    "heroSubtitle": "Especialistas con formación militar y policial para la protección personal, corporativa y familiar en entornos de alto riesgo.",
+    "heroCta": "Solicitar cotización",
+    "aboutEyebrow": "El servicio",
+    "aboutTitle": "Seguridad de alto nivel, sin comprometer la discreción",
+    "aboutDesc": "Nuestro equipo de seguridad privada está compuesto por ex militares y ex policías con años de experiencia en protección de alto perfil. Trabajamos con clientes que requieren máxima confidencialidad: líderes empresariales, figuras públicas, embajadas y family offices.",
+    "feature1Title": "Personal altamente entrenado",
+    "feature1Desc": "Agentes con formación en fuerzas especiales, manejo de armas, conducción táctica y protocolo de escolta.",
+    "feature2Title": "Evaluación de amenazas",
+    "feature2Desc": "Análisis previo del entorno, rutas seguras y planes de contingencia para cada operación.",
+    "feature3Title": "Respuesta 24/7",
+    "feature3Desc": "Equipos disponibles en todo momento para situaciones de emergencia o cambios imprevistos en el itinerario.",
+    "modalityEyebrow": "Modalidades",
+    "modalityTitle": "Tipos de protección",
+    "modality1Title": "Escolta personal",
+    "modality1Desc": "Agente dedicado que acompaña al cliente en todos sus desplazamientos con discreción y profesionalismo.",
+    "modality2Title": "Seguridad para grupos",
+    "modality2Desc": "Equipos de varios agentes para la protección de familias, delegaciones o grupos ejecutivos.",
+    "modality3Title": "Seguridad en eventos",
+    "modality3Desc": "Control de acceso, perímetro y protección de VIPs en eventos corporativos, sociales o privados.",
+    "discretionNote": "Por la naturaleza de nuestro servicio, toda la información sobre operaciones, clientes y procedimientos es estrictamente confidencial. RZ Group garantiza la máxima discreción en cada caso.",
+    "ctaTitle": "¿Necesita protección profesional?",
+    "ctaSubtitle": "Contáctenos con total confidencialidad. Diseñamos un esquema de seguridad adaptado a sus necesidades específicas.",
+    "ctaButton": "Solicitar cotización"
+  },
+  "rentACar": {
+    "eyebrow": "Rent a Car",
+    "heroTitle": "SUV de alta gama. Con o sin conductor.",
+    "heroSubtitle": "Alquiler de vehículos premium para uso corporativo, turístico o personal en Colombia, Estados Unidos y más destinos.",
+    "heroCta": "Reservar ahora",
+    "aboutEyebrow": "El servicio",
+    "aboutTitle": "Flexibilidad y clase en cada viaje",
+    "aboutDesc": "Nuestro servicio de Rent a Car ofrece SUV de alta gama perfectamente mantenidos, disponibles con conductor profesional o para conducción propia. Ideal para ejecutivos, turistas de alto perfil y familias que no quieren renunciar al confort durante su estadía.",
+    "feature1Title": "Sin depósitos complicados",
+    "feature1Desc": "Proceso de alquiler ágil y transparente, con cobertura incluida y sin cobros ocultos.",
+    "feature2Title": "Vehículos impecables",
+    "feature2Desc": "Flota con mantenimiento preventivo riguroso, limpieza detallada y revisión antes de cada entrega.",
+    "feature3Title": "Entrega donde usted esté",
+    "feature3Desc": "Llevamos el vehículo a su hotel, aeropuerto o dirección preferida.",
+    "fleetEyebrow": "Nuestra flota",
+    "fleetTitle": "Vehículos disponibles",
+    "fleetSubtitle": "SUV y sedanes de alta gama para cualquier necesidad.",
+    "optionsEyebrow": "Modalidades",
+    "optionsTitle": "¿Con o sin conductor?",
+    "option1Title": "Con conductor",
+    "option1Desc": "Incluye conductor profesional con experiencia en manejo de clientes VIP. Ideal si prefiere enfocarse en su agenda sin preocuparse por la navegación.",
+    "option2Title": "Sin conductor",
+    "option2Desc": "Conduzca usted mismo con total libertad. Entregamos el vehículo en el punto que prefiera y lo recogemos al finalizar.",
+    "ctaTitle": "Reserve su vehículo hoy",
+    "ctaSubtitle": "Disponibilidad por días o semanas. Un asesor le confirma tarifa y entrega en menos de 24 horas.",
+    "ctaButton": "Solicitar reserva"
   },
   "comfortTransport": {
     "eyebrow": "Transporte Confort",

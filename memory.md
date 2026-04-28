@@ -26,13 +26,13 @@ Next.js App Router + Tailwind + shadcn/ui + TypeScript + react-i18next (ES/EN)
 
 ## Rutas existentes
 - `/` — Homepage
-- `/reservas` — Formulario de reservas (nuevo)
-- `/transporte-luxury` — Transporte con conductores y vehículos de lujo
-- `/transporte-confort` — Transporte confort
-- `/transporte-aereo` — Helicópteros y jets privados
-- `/seguridad-privada` — Guardaespaldas con entrenamiento militar
-- `/renting-suv` — Renting de SUV
-- `/contactanos` — Formulario y datos de contacto
+- `/reservas` — Formulario de reservas con email via Resend
+- `/transporte-luxury` — Página de servicio: hero oscuro + descripción + flota + modalidades + CTA
+- `/transporte-confort` — Página de servicio: misma estructura, flota confort
+- `/seguridad-privada` — Página de servicio: escolta personal, grupos, eventos
+- `/rent-a-car` — Página de servicio: SUV con/sin conductor (antes `/renting-suv`, renombrado)
+- `/transporte-aereo` — Pendiente de construir
+- `/contactanos` — Pendiente de construir (formulario funcional)
 
 ## Estructura de la homepage (`src/app/page.tsx`)
 1. `HeroSection` — imagen de fondo `public/images/hero/Homepage_image.svg`, overlay oscuro
@@ -53,7 +53,8 @@ Next.js App Router + Tailwind + shadcn/ui + TypeScript + react-i18next (ES/EN)
 - Logo blanco (`brightness-0 invert`), tamaño 185×64px, header `h-24`
 - Texto siempre blanco
 - Orden: `Reserva Ahora` (CTA) → toggle `EN/ES`
-- Dropdown "Nuestros servicios" con 5 links incluyendo Renting de SUV
+- Dropdown "Nuestros servicios" con 5 links — el último dice "Rent a Car" → `/rent-a-car`
+- `OPAQUE_ROUTES`: `/reservas`, `/contactanos` — navbar negro desde el inicio en esas rutas
 
 ## Footer
 - Fondo `#070d0f`. Logo SVG en blanco (`brightness-0 invert`), tamaño 150×52px.
@@ -85,9 +86,21 @@ Next.js App Router + Tailwind + shadcn/ui + TypeScript + react-i18next (ES/EN)
 - Modalidad (Transfer/Horas) solo para Luxury, Confort y Aéreo
 - "Hotel o dirección de inicio" siempre visible en sección 3
 - "Número de vuelo" solo si modalidad = Transfer Aeropuerto
-- Sin integración backend — muestra estado de éxito al enviar
+- Backend: POST a `/api/reservas` → Resend SDK → email HTML a reservas@rzgroupsas.com
+
+## Páginas de servicio (`src/components/services/`)
+Todas siguen la misma estructura: hero oscuro (#070d0f) + descripción/features (#f9f9fe) + flota o modalidades (blanco/#f9f9fe) + CTA vinotinto.
+- `LuxuryPage.tsx` → `/transporte-luxury`
+- `ComfortPage.tsx` → `/transporte-confort`
+- `SecurityPage.tsx` → `/seguridad-privada`
+- `RentACarPage.tsx` → `/rent-a-car`
+
+## Email — formulario de reservas
+- `src/app/api/reservas/route.ts` — POST → Resend SDK → email a `diego2392martinez@gmail.com` (pruebas)
+- `RESEND_API_KEY` configurado en Vercel ✓
+- **Pendiente:** Cambiar destinatario a `reservas@rzgroupsas.com` verificando dominio en Resend O usando Google Workspace SMTP (usuario tiene plan pago G Suite)
 
 ## Pendientes
-- Integración backend para formulario de reservas (email o CRM)
-- Páginas de servicio individuales: /transporte-luxury, /transporte-confort, /transporte-aereo, /seguridad-privada, /renting-suv
-- /contactanos — formulario funcional
+- `/transporte-aereo` — página de servicio (no construida)
+- `/contactanos` — formulario funcional
+- Email sender: decidir entre verificar dominio en Resend o cambiar a Google Workspace SMTP

@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ```bash
 npm run dev          # servidor de desarrollo en localhost:3000
-npx tsc --noEmit     # verificar tipos antes de reportar como terminado
+npm run build        # verifica tipos y build completo (tsc está roto en node_modules, usar build)
 ```
 
 > Deploy: push a `main` despliega automáticamente en Vercel. No se necesita comando manual.
@@ -88,7 +88,21 @@ Navbar y Footer en `src/components/layout/`.
 - Sección 2: Tipo de servicio (dropdown) → si es Luxury o Confort, aparece dropdown de vehículo
 - Sección 3: N° personas, Modalidad (Transfer/Horas — solo para Luxury/Confort/Aéreo), Hotel o dirección de inicio (siempre), N° de vuelo (solo Transfer Aeropuerto)
 - Sección 4: Nombre, Email, Teléfono, Notas
-- Estado de éxito tras submit (sin integración backend aún)
+- Submit: POST a `/api/reservas` → Resend → email HTML. `RESEND_API_KEY` en Vercel env vars.
+
+### Páginas de servicio
+Patrón estándar en `src/components/services/<Nombre>Page.tsx`:
+1. Hero — `min-h-screen bg-[#070d0f]`, overlay `opacity-20` con `Homepage_image.svg`, texto blanco, CTA vinotinto
+2. Descripción + features — `bg-[#f9f9fe]`, grid 2 cols (texto izq, features der)
+3. Flota o modalidades — `bg-white` o `bg-[#f9f9fe]`
+4. CTA final — `bg-primary` (vinotinto), botón blanco → `/reservas`
+
+Páginas construidas: `/transporte-luxury`, `/transporte-confort`, `/seguridad-privada`, `/rent-a-car`
+Pendientes: `/transporte-aereo`, `/contactanos`
+
+### Terminología
+- "Rent a Car" (no "Renting de SUV") — actualizado en nav, ServicesSection y traducciones
+- Ruta: `/rent-a-car` (no `/renting-suv`)
 
 ### Git / Deploy
 - Antes de push, verificar tamaño de imágenes nuevas: `du -sh public/images/**/*`

@@ -15,7 +15,7 @@ const serviceLinks = [
   { key: 'nav.transportComfort', href: '/transporte-confort' },
   { key: 'nav.transportAir', href: '/transporte-aereo' },
   { key: 'nav.security', href: '/seguridad-privada' },
-  { key: 'nav.suvRental', href: '/renting-suv' },
+  { key: 'nav.suvRental', href: '/rent-a-car' },
 ];
 
 export default function NavbarClient() {

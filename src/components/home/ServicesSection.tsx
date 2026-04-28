@@ -46,7 +46,7 @@ const services = [
     icon: KeyIcon,
     titleKey: 'services.suv.title',
     descKey: 'services.suv.description',
-    href: '/renting-suv',
+    href: '/rent-a-car',
   },
 ];
 
