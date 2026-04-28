@@ -6,14 +6,14 @@ import { useTranslation } from 'react-i18next';
 import RelatedServices from './RelatedServices';
 
 const VEHICLES = [
-  { name: 'Chevrolet Tahoe Z71', category: 'fleet.luxury', seats: 7, img: '/images/fleet/luxury_page/Tahoe Z71.svg' },
-  { name: 'Chevrolet Tahoe LT', category: 'fleet.luxury', seats: 7, img: '/images/fleet/luxury_page/Tahoe LT.svg' },
-  { name: 'Cadillac Escalade', category: 'fleet.luxury', seats: 7, img: '/images/fleet/luxury_page/Cadillac Escalade.svg' },
-  { name: 'Mercedes Benz E250', category: 'fleet.executive', seats: 5, img: '/images/fleet/luxury_page/Mercedes Benz E250.svg' },
-  { name: 'Mercedes Sprinter Blindada', category: 'fleet.premium', seats: 15, img: '/images/fleet/luxury_page/Merdes Sprinter Blindada.svg' },
-  { name: 'Mercedes Sprinter', category: 'fleet.van', seats: 15, img: '/images/fleet/luxury_page/Merdes Sprinter.svg' },
-  { name: 'Toyota Prado Blindada', category: 'fleet.premium', seats: 7, img: '/images/fleet/luxury_page/Toyota Prado Blindada.svg' },
-  { name: 'Ford Expedition', category: 'fleet.luxury', seats: 7, img: '/images/fleet/luxury_page/Ford Expedition.svg' },
+  { name: 'Chevrolet Tahoe Z71', category: 'fleet.luxury', seats: 7, img: '/images/fleet/Luxury_page/Tahoe Z71.svg' },
+  { name: 'Chevrolet Tahoe LT', category: 'fleet.luxury', seats: 7, img: '/images/fleet/Luxury_page/Tahoe LT.svg' },
+  { name: 'Cadillac Escalade', category: 'fleet.luxury', seats: 7, img: '/images/fleet/Luxury_page/Cadillac Escalade.svg' },
+  { name: 'Mercedes Benz E250', category: 'fleet.executive', seats: 5, img: '/images/fleet/Luxury_page/Mercedes Benz E250.svg' },
+  { name: 'Mercedes Sprinter Blindada', category: 'fleet.premium', seats: 15, img: '/images/fleet/Luxury_page/Merdes Sprinter Blindada.svg' },
+  { name: 'Mercedes Sprinter', category: 'fleet.van', seats: 15, img: '/images/fleet/Luxury_page/Merdes Sprinter.svg' },
+  { name: 'Toyota Prado Blindada', category: 'fleet.premium', seats: 7, img: '/images/fleet/Luxury_page/Toyota Prado Blindada.svg' },
+  { name: 'Ford Expedition', category: 'fleet.luxury', seats: 7, img: '/images/fleet/Luxury_page/Ford Expedition.svg' },
 ];
 
 const FEATURES = [
