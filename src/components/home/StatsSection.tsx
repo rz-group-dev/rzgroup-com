@@ -12,7 +12,7 @@ export default function StatsSection() {
   const { t } = useTranslation();
 
   return (
-    <section className="bg-[#f9f9fe] border-t border-black/8">
+    <section id="stats" className="bg-[#f9f9fe] border-t border-black/8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-3">
           {stats.map((stat, i) => (

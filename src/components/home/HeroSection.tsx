@@ -63,14 +63,14 @@ export default function HeroSection() {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
-              href="/contactanos"
-              className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground text-xs font-light tracking-[0.3em] uppercase hover:bg-secondary transition-colors"
+              href="/reservas"
+              className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground text-xs font-light tracking-[0.3em] uppercase hover:bg-secondary transition-colors rounded-sm"
             >
               {t('home.hero.cta')}
             </Link>
             <Link
               href="#servicios"
-              className="inline-flex items-center justify-center px-8 py-4 border border-white/20 text-white text-xs font-light tracking-[0.3em] uppercase hover:border-primary hover:text-primary transition-colors"
+              className="inline-flex items-center justify-center px-8 py-4 border border-white/20 text-white text-xs font-light tracking-[0.3em] uppercase hover:border-primary hover:text-primary transition-colors rounded-sm"
             >
               {t('home.hero.ctaSecondary')}
             </Link>
@@ -79,9 +79,13 @@ export default function HeroSection() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+      <button
+        onClick={() => document.getElementById('stats')?.scrollIntoView({ behavior: 'smooth' })}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce cursor-pointer"
+        aria-label="Scroll down"
+      >
         <ArrowDownIcon className="w-4 h-4 text-white/40" />
-      </div>
+      </button>
     </section>
   );
 }

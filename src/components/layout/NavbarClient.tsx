@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import i18n from '@/lib/i18n';
 
-const OPAQUE_ROUTES = ['/reservas', '/contactanos'];
+const OPAQUE_ROUTES = ['/reservas', '/contactanos', '/politica-privacidad', '/politica-cookies'];
 
 const serviceLinks = [
   { key: 'nav.transportLuxury', href: '/transporte-luxury' },
