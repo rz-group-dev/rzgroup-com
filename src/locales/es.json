@@ -65,10 +65,13 @@
     }
   },
   "fleet": {
-    "title": "Nuestra Flota",
+    "title": "Nuestra Flota Luxury",
+    "subtitle": "Vehículos de última generación para su comodidad y seguridad.",
+    "titleComfort": "Nuestra Flota Confort",
+    "subtitleComfort": "Transporte grupal con estándares de calidad y seguridad.",
     "luxury": "Luxury",
     "executive": "Ejecutivo",
-    "van": "Van Ejecutiva",
+    "van": "Confort",
     "premium": "Premium"
   },
   "contact": {
@@ -88,6 +91,11 @@
       "success": "¡Mensaje enviado con éxito! Te contactaremos pronto.",
       "error": "Ocurrió un error. Por favor intenta de nuevo."
     }
+  },
+  "coverage": {
+    "eyebrow": "Cobertura",
+    "title": "Estamos ubicados en",
+    "back": "Ver todos los países"
   },
   "footer": {
     "rights": "Todos los derechos reservados.",

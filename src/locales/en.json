@@ -65,10 +65,13 @@
     }
   },
   "fleet": {
-    "title": "Our Fleet",
+    "title": "Our Luxury Fleet",
+    "subtitle": "State-of-the-art vehicles for your comfort and safety.",
+    "titleComfort": "Our Comfort Fleet",
+    "subtitleComfort": "Group transport with quality and safety standards.",
     "luxury": "Luxury",
     "executive": "Executive",
-    "van": "Executive Van",
+    "van": "Comfort",
     "premium": "Premium"
   },
   "contact": {
@@ -88,6 +91,11 @@
       "success": "Message sent successfully! We will contact you soon.",
       "error": "An error occurred. Please try again."
     }
+  },
+  "coverage": {
+    "eyebrow": "Coverage",
+    "title": "We are located in",
+    "back": "View all countries"
   },
   "footer": {
     "rights": "All rights reserved.",

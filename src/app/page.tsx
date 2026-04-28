@@ -3,7 +3,8 @@ import HeroSection from '@/components/home/HeroSection';
 import StatsSection from '@/components/home/StatsSection';
 import ServicesSection from '@/components/home/ServicesSection';
 import FleetSection from '@/components/home/FleetSection';
-import CtaSection from '@/components/home/CtaSection';
+import FleetComfortSection from '@/components/home/FleetComfortSection';
+import CoverageSection from '@/components/home/CoverageSection';
 
 export const metadata: Metadata = {
   title: 'RZ Group SAS — Transporte VIP y Seguridad Privada',
@@ -18,7 +19,8 @@ export default function HomePage() {
       <StatsSection />
       <ServicesSection />
       <FleetSection />
-      <CtaSection />
+      <FleetComfortSection />
+      <CoverageSection />
     </>
   );
 }

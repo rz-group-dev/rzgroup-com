@@ -1,50 +1,70 @@
 # Memory — rzgroup.com
 
 ## Objetivo
-Inspeccionar el sitio rzgroupsas.com y crear páginas nuevas según lo que apruebe el usuario.
+Construir y mejorar el sitio web de RZ Group SAS — empresa de transporte VIP y seguridad privada.
 
-## Sitio inspeccionado
-- URL: https://rzgroupsas.com/
-- Modelo de negocio: Agencia de transporte VIP y seguridad privada de alto perfil. Operan en Colombia (Bogotá) y EE.UU. (Nueva York). 10 años de experiencia. Clientes: turistas premium, empresas, embajadas, celebridades, family offices.
-- Idiomas: Bilingüe ES / EN
-- Rutas existentes:
-  - `/` — Homepage con hero, indicadores (10 años, 10 ciudades, 1000+ clientes, 24/7), servicios, flota, CTA
-  - `/transporte-luxury` — Servicio con conductores profesionales y vehículos de última generación
-  - `/transporte-confort` — Conductor a nivel mundial (tier inferior al Luxury)
-  - `/transporte-aereo` — Helicópteros y jets privados
-  - `/seguridad-privada` — Guardaespaldas con entrenamiento militar; subcategorías: Security Drivers, Personal Bodyguards, VIP Protection
-  - `/contactanos` — Formulario / datos de contacto
+## Sitio
+- URL producción: https://rzgroupsas.com/
+- Repo: https://github.com/diego-martinez-dev/rzgroup-com (privado)
+- Deploy: Vercel — push a `main` despliega automáticamente
 
-## Estilo visual observado
-- Marca premium/luxury; tono serio y confiable
-- Componentes recurrentes: hero (headline + CTA), service cards, vehicle carousel/grid, FAQ accordion, contact block doble (Bogotá + Nueva York)
-- Nav: sticky header con dropdown Transporte, toggle de idioma EN/ES
-- Footer: multi-columna con links de servicios, contacto, política de datos, cookies
-- Vehículos de flota: Chevrolet Tahoe Z71, Mercedes Sprinter, Ford Explorer, Toyota TXL, Ford Expedition
+## Modelo de negocio
+Agencia de transporte VIP y seguridad privada de alto perfil. Clientes: turistas premium, empresas, embajadas, celebridades, family offices.
+
+**Cobertura:** Estados Unidos, Puerto Rico, Colombia, México, Brasil y Argentina.
+
+## Stack
+Next.js App Router + Tailwind + shadcn/ui + TypeScript + react-i18next (ES/EN)
 
 ## Identidad de marca
-- Color primario: vino/borgoña — oklch(0.42 0.14 12)
-- Color secundario: verde militar — oklch(0.32 0.05 145)
-- Gris oscuro: oklch(0.38 0 0) | Gris claro: oklch(0.72 0 0)
-- Fuente cuerpo: Jost (equivalente a Avenir Light) — Google Fonts
-- Fuente display "RZ": Valorant (renderizado en CSS con tracking-widest + bold)
-- Logo: ›RZ GROUP / Exclusive Transportation S.A.S.
+- **Color primario:** vino/borgoña — `oklch(0.42 0.14 12)` / `#5b201f`
+- **Color secundario:** verde militar — `oklch(0.32 0.05 145)`
+- **Background página:** `#f9f9fe`
+- **Colores oscuros:** `#070d0f` (casi negro), `#b1b0b0` (gris)
+- **Fuente:** Jost (equivalente Avenir Light) — Google Fonts
+- **Logo:** SVG vectorizado (texto convertido a paths) en `public/Logo.svg` — se muestra en blanco con `brightness-0 invert`
 
-## Codebase
-- Stack: Next.js App Router + Tailwind + shadcn/ui + TypeScript + react-i18next
-- Repo: https://github.com/diego-martinez-dev/rzgroup-com (privado)
+## Rutas existentes
+- `/` — Homepage
+- `/transporte-luxury` — Transporte con conductores y vehículos de lujo
+- `/transporte-confort` — Transporte confort
+- `/transporte-aereo` — Helicópteros y jets privados
+- `/seguridad-privada` — Guardaespaldas con entrenamiento militar
+- `/renting-suv` — Renting de SUV (nuevo)
+- `/contactanos` — Formulario y datos de contacto
 
-## Decisiones tomadas
-- CLAUDE.md y memory.md inicializados (2026-04-27)
-- Inspección del sitio en vivo completada (2026-04-27)
-- Repo GitHub creado y stack base instalado (2026-04-27)
-- globals.css con tema luxury dark y paleta de marca real (2026-04-27)
-- Navbar (sticky, dropdown Transporte, toggle ES/EN, mobile hamburger) (2026-04-27)
-- Footer (4 columnas: logo+tagline, servicios, Bogotá, Nueva York) (2026-04-27)
-- Fuente Jost (Avenir equivalente) configurada como --font-sans
+## Estructura de la homepage (`src/app/page.tsx`)
+1. `HeroSection` — imagen de fondo `public/images/hero/Homepage_image.svg`
+2. `StatsSection` — fondo `#f9f9fe`, números en color primario: 10+ años, 6 países, 24/7
+3. `ServicesSection` — 6 servicios incluyendo Renting de SUV
+4. `FleetSection` — Flota Luxury (fondo `#3c473e`)
+5. `FleetComfortSection` — Flota Confort (fondo `#2c2c2c`)
+6. `CtaSection`
+
+## Flota Luxury (`public/images/fleet/`)
+- Tahoe Z71, Tahoe LT, Cadillac Escalade, Mercedes Benz E250, Sprinter Blindada, Toyota Blindada
+
+## Flota Confort (`public/images/fleet/`)
+- Renault Duster (`Duster.png`), Hyundai H1, Mercedes Vito, Mercedes Sprinter, Bus 40 Pax
+
+## Header (NavbarClient)
+- Fondo transparente → negro (`bg-black`) al hacer scroll
+- Logo blanco (`brightness-0 invert`), tamaño 185×64px, header `h-24`
+- Texto siempre blanco
+- Orden: `Reserva Ahora` (CTA) → toggle `EN/ES`
+- Dropdown "Nuestros servicios" con 5 links incluyendo Renting de SUV
+
+## Reglas de git
+- `public/images/services/` está en `.gitignore` — archivos demasiado grandes para GitHub
+- Las imágenes de `fleet/`, `hero/` y `stats/` sí van a git (son SVGs ligeros)
+- Antes de push, verificar que no haya archivos mayores a 50MB con `du -sh public/images/**/*`
+
+## Decisiones técnicas
+- Logo SVG: texto convertido a paths/outlines para evitar dependencia de fuentes en producción
+- StatsSection: usa CSS `background-image` inline (no `<Image>` de Next.js) para SVG de fondo
+- Imágenes de flota: `object-contain` con `p-4` para que los SVGs se vean completos
+- Caché de Vercel: probar cambios en ventana incógnita antes de reportar problemas
 
 ## Pendientes
-- Homepage (hero, stats, servicios, flota, CTA)
-- Páginas de servicio: /transporte-luxury, /transporte-confort, /transporte-aereo
-- /seguridad-privada
-- /contactanos
+- Páginas de servicio individuales: /transporte-luxury, /transporte-confort, /transporte-aereo, /seguridad-privada, /renting-suv
+- /contactanos — formulario funcional
