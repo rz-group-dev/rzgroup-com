@@ -3,9 +3,12 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
 import { Bars3Icon, XMarkIcon, ChevronDownIcon } from '@heroicons/react/24/outline';
 import i18n from '@/lib/i18n';
+
+const OPAQUE_ROUTES = ['/reservas', '/contactanos'];
 
 const serviceLinks = [
   { key: 'nav.transportLuxury', href: '/transporte-luxury' },
@@ -17,9 +20,12 @@ const serviceLinks = [
 
 export default function NavbarClient() {
   const { t } = useTranslation();
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const alwaysOpaque = OPAQUE_ROUTES.includes(pathname);
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 40);
@@ -36,7 +42,7 @@ export default function NavbarClient() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-black shadow-sm' : 'bg-transparent'
+        isScrolled || alwaysOpaque ? 'bg-black shadow-sm' : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -96,7 +102,7 @@ export default function NavbarClient() {
           <div className="flex items-center gap-4">
             {/* CTA */}
             <Link
-              href="/contactanos"
+              href="/reservas"
               className="hidden lg:inline-flex items-center px-5 py-2.5 bg-primary text-primary-foreground text-xs font-light tracking-widest hover:bg-secondary transition-colors"
             >
               {t('common.bookNow')}
@@ -155,7 +161,7 @@ export default function NavbarClient() {
 
             <div className="pt-4">
               <Link
-                href="/contactanos"
+                href="/reservas"
                 onClick={() => setIsOpen(false)}
                 className="block text-center px-5 py-3 bg-primary text-primary-foreground text-xs font-light tracking-widest"
               >

@@ -26,11 +26,12 @@ Next.js App Router + Tailwind + shadcn/ui + TypeScript + react-i18next (ES/EN)
 
 ## Rutas existentes
 - `/` — Homepage
+- `/reservas` — Formulario de reservas (nuevo)
 - `/transporte-luxury` — Transporte con conductores y vehículos de lujo
 - `/transporte-confort` — Transporte confort
 - `/transporte-aereo` — Helicópteros y jets privados
 - `/seguridad-privada` — Guardaespaldas con entrenamiento militar
-- `/renting-suv` — Renting de SUV (nuevo)
+- `/renting-suv` — Renting de SUV
 - `/contactanos` — Formulario y datos de contacto
 
 ## Estructura de la homepage (`src/app/page.tsx`)
@@ -77,6 +78,16 @@ Next.js App Router + Tailwind + shadcn/ui + TypeScript + react-i18next (ES/EN)
 - Lazy loading: imágenes de flota solo cargan al entrar al viewport — en puppeteer/headless hay que hacer scroll antes de capturar.
 - Caché del navegador: probar cambios en ventana incógnita
 
+## Página de reservas (`/reservas`)
+- `src/app/reservas/page.tsx` + `src/components/reservas/BookingForm.tsx`
+- Servicios: Transporte Luxury, Confort, Aéreo, Seguridad Privada, Rent a Car
+- Luxury y Confort desplegan dropdown de vehículo
+- Modalidad (Transfer/Horas) solo para Luxury, Confort y Aéreo
+- "Hotel o dirección de inicio" siempre visible en sección 3
+- "Número de vuelo" solo si modalidad = Transfer Aeropuerto
+- Sin integración backend — muestra estado de éxito al enviar
+
 ## Pendientes
+- Integración backend para formulario de reservas (email o CRM)
 - Páginas de servicio individuales: /transporte-luxury, /transporte-confort, /transporte-aereo, /seguridad-privada, /renting-suv
 - /contactanos — formulario funcional

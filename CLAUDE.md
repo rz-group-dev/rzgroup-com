@@ -76,6 +76,20 @@ Navbar y Footer en `src/components/layout/`.
 - Siempre agregar claves nuevas a ambos archivos de idioma en paralelo
 - Seguir la estructura existente de claves: `seccion.subseccion.clave`
 
+### Navbar
+- Fondo transparente → negro al hacer scroll (`isScrolled`)
+- En rutas con fondo claro (`OPAQUE_ROUTES`: `/reservas`, `/contactanos`), el fondo es negro desde el inicio via `usePathname()`
+- "Reserva Ahora" → `/reservas` | "Contáctanos" → `/contactanos`
+
+### Página de reservas (`/reservas`)
+- Componente: `src/components/reservas/BookingForm.tsx`
+- Fondo `#f9f9fe`, 4 secciones numeradas
+- Sección 1: Fecha, País, Ciudad (ciudad dinámica por país)
+- Sección 2: Tipo de servicio (dropdown) → si es Luxury o Confort, aparece dropdown de vehículo
+- Sección 3: N° personas, Modalidad (Transfer/Horas — solo para Luxury/Confort/Aéreo), Hotel o dirección de inicio (siempre), N° de vuelo (solo Transfer Aeropuerto)
+- Sección 4: Nombre, Email, Teléfono, Notas
+- Estado de éxito tras submit (sin integración backend aún)
+
 ### Git / Deploy
 - Antes de push, verificar tamaño de imágenes nuevas: `du -sh public/images/**/*`
 - Archivos mayores a 50 MB no van a GitHub — usar almacenamiento externo (Vercel Blob, Cloudinary)
