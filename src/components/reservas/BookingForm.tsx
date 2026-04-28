@@ -94,6 +94,7 @@ export default function BookingForm() {
   const [form, setForm] = useState<FormData>(EMPTY_FORM);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   const cities = form.country ? CITIES_BY_COUNTRY[form.country] ?? [] : [];
   const vehicles = form.serviceCategory ? VEHICLES_BY_SERVICE[form.serviceCategory] : null;
@@ -111,9 +112,23 @@ export default function BookingForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    await new Promise(r => setTimeout(r, 800));
-    setLoading(false);
-    setSubmitted(true);
+    setError(false);
+    try {
+      const res = await fetch('/api/reservas', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        setError(true);
+      }
+    } catch {
+      setError(true);
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (submitted) {
@@ -388,7 +403,7 @@ export default function BookingForm() {
         </div>
 
         {/* Submit */}
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-6 flex-wrap">
           <button
             type="submit"
             disabled={loading || !form.serviceCategory}
@@ -396,9 +411,11 @@ export default function BookingForm() {
           >
             {loading ? t('common.loading') : t('booking.submit')}
           </button>
-          <p className="text-[10px] font-light text-foreground/30">
-            {t('booking.submitNote')}
-          </p>
+          {error ? (
+            <p className="text-[10px] font-light text-red-500">{t('common.error')}</p>
+          ) : (
+            <p className="text-[10px] font-light text-foreground/30">{t('booking.submitNote')}</p>
+          )}
         </div>
       </form>
     </main>
