@@ -1,14 +1,36 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 import { PhoneIcon, EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/outline';
 
-const serviceLinks = [
-  { key: 'nav.transportLuxury', href: '/transporte-luxury' },
-  { key: 'nav.transportComfort', href: '/transporte-confort' },
-  { key: 'nav.transportAir', href: '/transporte-aereo' },
-  { key: 'nav.security', href: '/seguridad-privada' },
+const socialLinks = [
+  {
+    label: 'reservas@rzgroupsas.com',
+    href: 'mailto:reservas@rzgroupsas.com',
+    icon: EnvelopeIcon,
+  },
+  {
+    label: 'Instagram',
+    href: 'https://www.instagram.com/rzgroup_/',
+    icon: () => (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 shrink-0">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+        <circle cx="12" cy="12" r="4"/>
+        <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+      </svg>
+    ),
+  },
+  {
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/company/rz-group-co',
+    icon: () => (
+      <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 shrink-0">
+        <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45C23.2 24 24 23.23 24 22.28V1.72C24 .77 23.2 0 22.22 0z"/>
+      </svg>
+    ),
+  },
 ];
 
 export default function Footer() {
@@ -22,36 +44,37 @@ export default function Footer() {
 
           {/* Logo & tagline */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-1 mb-6">
-              <span className="text-primary text-xl font-light">›</span>
-              <span className="text-white font-bold text-2xl tracking-widest uppercase">RZ</span>
-              <div className="flex flex-col leading-none ml-1">
-                <span className="text-white font-light text-base tracking-[0.3em] uppercase">GROUP</span>
-                <span className="text-white/40 font-light text-[7px] tracking-[0.15em] uppercase">
-                  Exclusive Transportation S.A.S.
-                </span>
-              </div>
+            <Link href="/" className="flex items-center mb-6">
+              <Image
+                src="/Logo.svg"
+                alt="RZ Group"
+                width={150}
+                height={52}
+                className="brightness-0 invert"
+              />
             </Link>
             <p className="text-white/50 text-sm font-light leading-relaxed">
               {t('home.hero.subtitle')}
             </p>
           </div>
 
-          {/* Services */}
+          {/* Redes sociales */}
           <div>
             <h3 className="text-xs font-light tracking-[0.3em] uppercase text-white/40 mb-6">
-              {t('home.services.title')}
+              {t('footer.social')}
             </h3>
-            <ul className="space-y-3">
-              {serviceLinks.map(({ key, href }) => (
-                <li key={href}>
-                  <Link
+            <ul className="space-y-4">
+              {socialLinks.map(({ label, href, icon: Icon }) => (
+                <li key={href} className="flex items-center gap-3">
+                  <span className="text-primary"><Icon /></span>
+                  <a
                     href={href}
-                    className="text-sm font-light text-white/60 hover:text-primary transition-colors flex items-center gap-2"
+                    target={href.startsWith('mailto') ? undefined : '_blank'}
+                    rel={href.startsWith('mailto') ? undefined : 'noopener noreferrer'}
+                    className="text-sm font-light text-white/60 hover:text-white transition-colors"
                   >
-                    <span className="text-primary text-xs">›</span>
-                    {t(key)}
-                  </Link>
+                    {label}
+                  </a>
                 </li>
               ))}
             </ul>
