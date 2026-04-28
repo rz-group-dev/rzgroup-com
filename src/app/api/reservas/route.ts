@@ -73,7 +73,7 @@ export async function POST(req: NextRequest) {
   try {
     await resend.emails.send({
       from: 'RZ Group Reservas <onboarding@resend.dev>',
-      to: 'reservas@rzgroupsas.com',
+      to: 'diego.martinez@rzgroupsas.com',
       replyTo: email,
       subject: `Reserva — ${serviceName} — ${name}`,
       html,
