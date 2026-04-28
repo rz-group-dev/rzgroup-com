@@ -29,12 +29,12 @@ export default function FleetSection() {
           </h2>
         </div>
 
-        {/* Vehicle grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {/* Vehicle scroll row */}
+        <div className="flex gap-4 overflow-x-auto pb-4 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8 scrollbar-hide">
           {vehicles.map((vehicle) => (
             <div
               key={vehicle.name}
-              className="group border border-border hover:border-primary transition-colors"
+              className="group border border-border hover:border-primary transition-colors shrink-0 w-64"
             >
               {/* Vehicle image */}
               <div className="aspect-[4/3] relative overflow-hidden bg-[#ffffff]">
@@ -60,15 +60,18 @@ export default function FleetSection() {
               </div>
             </div>
           ))}
-        </div>
 
-        {/* CTA */}
-        <div className="mt-12 text-center">
+          {/* Ver más */}
           <Link
-            href="/contactanos"
-            className="inline-flex items-center px-8 py-4 bg-primary text-primary-foreground text-xs font-light tracking-widest hover:bg-primary/80 transition-colors"
+            href="/transporte-luxury"
+            className="shrink-0 w-48 border border-border hover:border-primary transition-colors flex flex-col items-center justify-center gap-3 text-center p-8 group"
           >
-            {t('common.bookNow')}
+            <span className="text-xs font-light tracking-[0.3em] uppercase text-primary group-hover:text-primary/70 transition-colors">
+              {t('common.learnMore')}
+            </span>
+            <svg className="w-5 h-5 text-primary group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
           </Link>
         </div>
       </div>

@@ -241,10 +241,36 @@
     "ctaSubtitle": "Book in under 2 minutes. An advisor confirms your service within 24 hours.",
     "ctaButton": "Request service"
   },
+  "airTransport": {
+    "eyebrow": "Air Transport",
+    "heroTitle": "Fast and exclusive transfers in the air",
+    "heroSubtitle": "Private jets and helicopters for executives, high-profile tourists, and clients who value their time above all.",
+    "heroCta": "Book now",
+    "aboutEyebrow": "The service",
+    "aboutTitle": "When time is your most valuable asset",
+    "aboutDesc": "Our Air Transport service connects cities and destinations with discretion and efficiency. We coordinate charter flights in private jets and helicopter transfers for clients who require maximum flexibility, confidentiality, and comfort.",
+    "feature1Title": "Private jets and helicopters",
+    "feature1Desc": "Broad network of aircraft available for domestic and international on-demand flights.",
+    "feature2Title": "Comprehensive coordination",
+    "feature2Desc": "We manage permits, flight slots, ground handling, and connection to VIP ground transport.",
+    "feature3Title": "24/7 availability",
+    "feature3Desc": "Departures at any time of day, tailored to your schedule with no waiting at commercial terminals.",
+    "optionsEyebrow": "Modalities",
+    "optionsTitle": "Choose your flight type",
+    "option1Title": "Private Jet",
+    "option1Desc": "Charter flights on executive jets for national and international travel. Maximum privacy, comfort, and punctuality.",
+    "option2Title": "Helicopter",
+    "option2Desc": "Short transfers between cities, events, or hard-to-reach areas. Ideal for optimizing time in congested destinations.",
+    "ctaTitle": "Need a private flight?",
+    "ctaSubtitle": "Tell us your destination and dates. An advisor will confirm availability and rate within 24 hours.",
+    "ctaButton": "Request a quote"
+  },
   "common": {
     "bookNow": "Book now",
     "learnMore": "Learn more",
     "loading": "Loading...",
-    "error": "Something went wrong. Please try again."
+    "error": "Something went wrong. Please try again.",
+    "relatedServices": "You might also like",
+    "relatedServicesTitle": "Other services"
   }
 }

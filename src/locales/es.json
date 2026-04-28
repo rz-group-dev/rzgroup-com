@@ -241,10 +241,36 @@
     "ctaSubtitle": "Reserve en menos de 2 minutos. Un asesor confirma su servicio en menos de 24 horas.",
     "ctaButton": "Solicitar servicio"
   },
+  "airTransport": {
+    "eyebrow": "Transporte Aéreo",
+    "heroTitle": "Traslados rápidos y exclusivos en el aire",
+    "heroSubtitle": "Jets privados y helicópteros para ejecutivos, turistas de alto perfil y clientes que valoran su tiempo por encima de todo.",
+    "heroCta": "Reservar ahora",
+    "aboutEyebrow": "El servicio",
+    "aboutTitle": "Cuando el tiempo es lo más valioso",
+    "aboutDesc": "Nuestro servicio de Transporte Aéreo conecta ciudades y destinos con discreción y eficiencia. Coordinamos vuelos chárter en jets privados y traslados en helicóptero para clientes que requieren máxima flexibilidad, confidencialidad y confort.",
+    "feature1Title": "Jets privados y helicópteros",
+    "feature1Desc": "Amplia red de aeronaves disponibles para vuelos nacionales e internacionales bajo demanda.",
+    "feature2Title": "Coordinación integral",
+    "feature2Desc": "Gestionamos permisos, slots de vuelo, handling en tierra y conexión con transporte terrestre VIP.",
+    "feature3Title": "Disponibilidad 24/7",
+    "feature3Desc": "Salidas en cualquier momento del día, adaptadas a su agenda sin tiempos de espera en terminales comerciales.",
+    "optionsEyebrow": "Modalidades",
+    "optionsTitle": "Elige tu tipo de vuelo",
+    "option1Title": "Jet Privado",
+    "option1Desc": "Vuelos chárter en jets ejecutivos para viajes nacionales e internacionales. Máxima privacidad, comodidad y puntualidad.",
+    "option2Title": "Helicóptero",
+    "option2Desc": "Traslados cortos entre ciudades, eventos o zonas de difícil acceso. Ideal para optimizar el tiempo en destinos congestionados.",
+    "ctaTitle": "¿Necesita un vuelo privado?",
+    "ctaSubtitle": "Cuéntenos su destino y fechas. Un asesor le confirma disponibilidad y tarifa en menos de 24 horas.",
+    "ctaButton": "Solicitar cotización"
+  },
   "common": {
     "bookNow": "Reserva Ahora",
     "learnMore": "Ver más",
     "loading": "Cargando...",
-    "error": "Algo salió mal. Intenta de nuevo."
+    "error": "Algo salió mal. Intenta de nuevo.",
+    "relatedServices": "También te puede interesar",
+    "relatedServicesTitle": "Otros servicios"
   }
 }

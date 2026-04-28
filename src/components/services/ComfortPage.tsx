@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
+import RelatedServices from './RelatedServices';
 
 const VEHICLES = [
   { name: 'Renault Duster', category: 'fleet.executive', seats: 5, img: '/images/fleet/Duster.png' },
@@ -189,6 +190,9 @@ export default function ComfortPage() {
           </div>
         </div>
       </section>
+
+      {/* Related services */}
+      <RelatedServices exclude="comfort" />
 
       {/* CTA */}
       <section className="py-24 bg-primary px-4">

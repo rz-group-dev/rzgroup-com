@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
+import RelatedServices from './RelatedServices';
 
 const VEHICLES = [
   { name: 'Chevrolet Tahoe Z71', category: 'fleet.luxury', seats: 7, img: '/images/fleet/Tahoe Z71.svg' },
@@ -190,6 +191,9 @@ export default function LuxuryPage() {
           </div>
         </div>
       </section>
+
+      {/* Related services */}
+      <RelatedServices exclude="luxury" />
 
       {/* CTA */}
       <section className="py-24 bg-primary px-4">
