@@ -1,17 +1,9 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import RelatedServices from './RelatedServices';
-
-const VEHICLES = [
-  { name: 'Renault Duster', category: 'fleet.executive', seats: 5, img: '/images/fleet/Duster.png' },
-  { name: 'Hyundai H1', category: 'fleet.van', seats: 8, img: '/images/fleet/Hyundai H1.svg' },
-  { name: 'Mercedes Vito', category: 'fleet.van', seats: 8, img: '/images/fleet/Merccedes Vito.svg' },
-  { name: 'Mercedes Sprinter', category: 'fleet.van', seats: 19, img: '/images/fleet/Mercedes Sprinter.svg' },
-  { name: 'Bus 40 Pasajeros', category: 'fleet.van', seats: 40, img: '/images/fleet/Bus 40 Pax.svg' },
-];
+import FleetGalleryComfort from './FleetGalleryComfort';
 
 const FEATURES = [
   {
@@ -43,26 +35,6 @@ const FEATURES = [
   },
 ];
 
-const MODALITIES = [
-  {
-    titleKey: 'comfortTransport.modalityAirportTitle',
-    descKey: 'comfortTransport.modalityAirportDesc',
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
-      </svg>
-    ),
-  },
-  {
-    titleKey: 'comfortTransport.modalityHoursTitle',
-    descKey: 'comfortTransport.modalityHoursDesc',
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
-  },
-];
 
 export default function ComfortPage() {
   const { t } = useTranslation();
@@ -129,64 +101,16 @@ export default function ComfortPage() {
       </section>
 
       {/* Fleet */}
-      <section className="py-24 bg-white px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-14">
-            <p className="text-primary text-xs font-light tracking-[0.4em] uppercase mb-4">
-              ›&nbsp;&nbsp;{t('comfortTransport.fleetEyebrow')}
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-light text-foreground tracking-tight">
-              {t('comfortTransport.fleetTitle')}
-            </h2>
-            <p className="mt-3 text-sm font-light text-foreground/40 max-w-lg">
-              {t('comfortTransport.fleetSubtitle')}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {VEHICLES.map((v) => (
-              <div key={v.name} className="group border border-foreground/10 hover:border-primary transition-colors">
-                <div className="aspect-[4/3] relative overflow-hidden bg-[#f9f9fe]">
-                  <Image
-                    src={v.img}
-                    alt={v.name}
-                    fill
-                    className="object-contain p-6"
-                  />
-                </div>
-                <div className="p-5 border-t border-foreground/10">
-                  <span className="text-[10px] font-light tracking-[0.3em] uppercase text-primary mb-2 block">
-                    {t(v.category)}
-                  </span>
-                  <h3 className="text-sm font-light text-foreground">{v.name}</h3>
-                  <p className="text-xs text-foreground/40 font-light mt-1">{v.seats} pasajeros</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Modalities */}
-      <section className="py-24 bg-[#f9f9fe] px-4">
+      <section className="py-15 bg-white px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="mb-14">
-            <p className="text-primary text-xs font-light tracking-[0.4em] uppercase mb-4">
-              ›&nbsp;&nbsp;{t('comfortTransport.modalityEyebrow')}
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-light text-foreground tracking-tight">
-              {t('comfortTransport.modalityTitle')}
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-            {MODALITIES.map((m, i) => (
-              <div key={i} className="border border-foreground/10 p-8 hover:border-primary transition-colors">
-                <div className="text-primary mb-5">{m.icon}</div>
-                <h3 className="text-base font-light text-foreground mb-3">{t(m.titleKey)}</h3>
-                <p className="text-sm font-light text-foreground/40 leading-relaxed">{t(m.descKey)}</p>
-              </div>
-            ))}
+          <FleetGalleryComfort />
+          <div className="mt-8 flex justify-center">
+            <Link
+              href="/reservas"
+              className="inline-flex items-center px-10 py-4 bg-primary text-white text-xs font-light tracking-widest hover:bg-primary/80 transition-colors rounded-2xl"
+            >
+              {t('comfortTransport.heroCta')}
+            </Link>
           </div>
         </div>
       </section>
