@@ -46,15 +46,12 @@ export default function ComfortPage() {
         <div
           className="absolute inset-0 opacity-20"
           style={{
-            backgroundImage: 'url(/images/hero/Homepage_image.svg)',
+            backgroundImage: 'url(/images/hero/transporte_confort.svg)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
         />
         <div className="relative max-w-4xl mx-auto w-full">
-          <p className="text-primary text-xs font-light tracking-[0.4em] uppercase mb-6">
-            ›&nbsp;&nbsp;{t('comfortTransport.eyebrow')}
-          </p>
           <h1 className="text-4xl sm:text-6xl font-light text-white tracking-tight max-w-2xl leading-tight mb-6">
             {t('comfortTransport.heroTitle')}
           </h1>
