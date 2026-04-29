@@ -71,9 +71,6 @@ export default function AirTransportPage() {
           }}
         />
         <div className="relative max-w-4xl mx-auto w-full">
-          <p className="text-primary text-xs font-light tracking-[0.4em] uppercase mb-6">
-            ›&nbsp;&nbsp;{t('airTransport.eyebrow')}
-          </p>
           <h1 className="text-4xl sm:text-6xl font-light text-white tracking-tight max-w-2xl leading-tight mb-6">
             {t('airTransport.heroTitle')}
           </h1>
