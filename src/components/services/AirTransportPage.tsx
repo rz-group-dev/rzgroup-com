@@ -65,7 +65,7 @@ export default function AirTransportPage() {
         <div
           className="absolute inset-0 opacity-20"
           style={{
-            backgroundImage: 'url(/images/hero/Homepage_image.svg)',
+            backgroundImage: 'url(/images/hero/transporte_aereo.svg)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
