@@ -12,6 +12,7 @@ const jost = Jost({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://rzgroupsas.com'),
   title: {
     default: 'RZ Group SAS — Transporte VIP y Seguridad Privada',
     template: '%s | RZ Group SAS',
@@ -24,6 +25,8 @@ export const metadata: Metadata = {
     locale: 'es_CO',
     alternateLocale: 'en_US',
     siteName: 'RZ Group SAS',
+    url: 'https://rzgroupsas.com',
+    images: [{ url: '/images/og-image.jpg', width: 1200, height: 630, alt: 'RZ Group SAS — Transporte VIP y Seguridad Privada' }],
   },
 };
 

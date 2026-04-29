@@ -72,7 +72,7 @@ export default function RentACarPage() {
         <div
           className="absolute inset-0 opacity-20"
           style={{
-            backgroundImage: 'url(/images/hero/Homepage_image.svg)',
+            backgroundImage: 'url(/images/hero/rent_a_car.jpg)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}

@@ -116,8 +116,16 @@ export default function LuxuryPage() {
       <RelatedServices exclude="luxury" />
 
       {/* CTA */}
-      <section className="py-24 bg-primary px-4">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="relative py-24 bg-primary px-4">
+        <div
+          className="absolute inset-0 opacity-3"
+          style={{
+            backgroundImage: 'url(/images/textures/Textura.svg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
+        <div className="relative max-w-4xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-light text-white tracking-tight mb-4">
             {t('luxuryTransport.ctaTitle')}
           </h2>

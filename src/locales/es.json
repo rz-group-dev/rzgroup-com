@@ -163,8 +163,8 @@
   },
   "rentACar": {
     "eyebrow": "Rent a Car",
-    "heroTitle": "SUV de alta gama. Con o sin conductor.",
-    "heroSubtitle": "Alquiler de vehículos premium para uso corporativo, turístico o personal en Colombia, Estados Unidos y más destinos.",
+    "heroTitle": "Rent a Car.",
+    "heroSubtitle": "Alquiler de SUV de gama alta premium por días sin conductor",
     "heroCta": "Reservar ahora",
     "aboutEyebrow": "El servicio",
     "aboutTitle": "Flexibilidad y clase en cada viaje",
@@ -190,7 +190,7 @@
   },
   "comfortTransport": {
     "eyebrow": "Transporte Confort",
-    "heroTitle": "Comodidad y calidad para grupos de cualquier tamaño",
+    "heroTitle": "Transporte Confort",
     "heroSubtitle": "Flota versátil con conductores profesionales para traslados corporativos, turísticos y grupales en 6 países.",
     "heroCta": "Reservar ahora",
     "aboutEyebrow": "El servicio",
@@ -218,7 +218,7 @@
   },
   "luxuryTransport": {
     "eyebrow": "Transporte Luxury",
-    "heroTitle": "Conducción de alto perfil, discreción absoluta",
+    "heroTitle": "Transporte Luxury",
     "heroSubtitle": "Vehículos de última generación y conductores profesionales para una experiencia de traslado excepcional en cada destino.",
     "heroCta": "Reservar ahora",
     "aboutEyebrow": "El servicio",

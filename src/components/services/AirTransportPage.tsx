@@ -65,7 +65,7 @@ export default function AirTransportPage() {
         <div
           className="absolute inset-0 opacity-20"
           style={{
-            backgroundImage: 'url(/images/hero/transporte_aereo.svg)',
+            backgroundImage: 'url(/images/hero/transporte_aereo.png)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
@@ -144,8 +144,16 @@ export default function AirTransportPage() {
       <RelatedServices exclude="air" />
 
       {/* CTA */}
-      <section className="py-24 bg-primary px-4">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="relative py-24 bg-primary px-4">
+        <div
+          className="absolute inset-0 opacity-3"
+          style={{
+            backgroundImage: 'url(/images/textures/Textura.svg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
+        <div className="relative max-w-4xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-light text-white tracking-tight mb-4">
             {t('airTransport.ctaTitle')}
           </h2>

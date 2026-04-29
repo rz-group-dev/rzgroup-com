@@ -12,7 +12,7 @@ export default function HeroSection() {
     <section className="relative min-h-screen flex items-center overflow-hidden bg-[#070d0f]">
       {/* Background image */}
       <Image
-        src="/images/hero/Homepage_image.svg"
+        src="/images/hero/Homepage_image.png"
         alt=""
         fill
         priority

@@ -98,7 +98,7 @@
     "back": "View all countries"
   },
   "footer": {
-    "tagline": "Private transportation service in LATAM and the United States. We have VIP and comfort vehicles.",
+    "tagline": "Transportation company authorized by the Ministry of Transport of the Republic of Colombia.",
     "rights": "All rights reserved.",
     "privacy": "Privacy policy",
     "cookies": "Cookie policy",
@@ -163,8 +163,8 @@
   },
   "rentACar": {
     "eyebrow": "Rent a Car",
-    "heroTitle": "Premium SUVs. With or without a driver.",
-    "heroSubtitle": "Premium vehicle rental for corporate, tourism, or personal use in Colombia, the United States, and more destinations.",
+    "heroTitle": "Rent a Car.",
+    "heroSubtitle": "Premium SUV rental by the day, without a driver.",
     "heroCta": "Book now",
     "aboutEyebrow": "The service",
     "aboutTitle": "Flexibility and class in every trip",
@@ -190,7 +190,7 @@
   },
   "comfortTransport": {
     "eyebrow": "Comfort Transport",
-    "heroTitle": "Comfort and quality for groups of any size",
+    "heroTitle": "Comfort Transport",
     "heroSubtitle": "Versatile fleet with professional drivers for corporate, tourism, and group transfers across 6 countries.",
     "heroCta": "Book now",
     "aboutEyebrow": "The service",
@@ -218,7 +218,7 @@
   },
   "luxuryTransport": {
     "eyebrow": "Luxury Transport",
-    "heroTitle": "High-profile chauffeur service, absolute discretion",
+    "heroTitle": "Luxury Transport",
     "heroSubtitle": "State-of-the-art vehicles and professional drivers for an exceptional transfer experience at every destination.",
     "heroCta": "Book now",
     "aboutEyebrow": "The service",

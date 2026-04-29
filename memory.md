@@ -51,8 +51,9 @@ Next.js App Router + Tailwind + shadcn/ui + TypeScript + react-i18next (ES/EN)
 - Tahoe Z71, Tahoe LT, Cadillac Escalade, Mercedes Benz E250, Sprinter Blindada, Sprinter, Toyota Prado Blindada, Ford Expedition
 - Hero image propio: `public/images/hero/transporte_luxury.svg`
 
-## Flota Confort (`public/images/fleet/`)
-- Renault Duster (`Duster.png`), Hyundai H1, Mercedes Vito, Mercedes Sprinter, Bus 40 Pax
+## Flota Confort — Página `/transporte-confort` (`public/images/fleet/Confort_page/`)
+- Renault Duster, Hyundai H1, Mercedes Vito, Mercedes Sprinter, Volkswagen Crafter, Bus 30 Pax, Bus 40 Pax
+- Hero image propio: `public/images/hero/transporte_confort.svg`
 
 ## Header (NavbarClient)
 - Fondo transparente → negro (`bg-black`) al hacer scroll
@@ -96,15 +97,16 @@ Next.js App Router + Tailwind + shadcn/ui + TypeScript + react-i18next (ES/EN)
 - Backend: POST a `/api/reservas` → Resend SDK → email HTML a reservas@rzgroupsas.com
 
 ## Páginas de servicio (`src/components/services/`)
-Todas siguen la misma estructura: hero oscuro (#070d0f) + descripción/features (#f9f9fe) + flota o modalidades (blanco/#f9f9fe) + CTA vinotinto.
-- `LuxuryPage.tsx` → `/transporte-luxury` — sin sección Modalidades; flota via `FleetGallery.tsx`
-- `ComfortPage.tsx` → `/transporte-confort`
-- `SecurityPage.tsx` → `/seguridad-privada`
-- `RentACarPage.tsx` → `/rent-a-car`
-- `AirTransportPage.tsx` → `/transporte-aereo`
+Estructura común: hero oscuro (#070d0f, sin eyebrow) + descripción/features (#f9f9fe) + flota slider (bg-white) + CTA vinotinto con textura.
+- `LuxuryPage.tsx` → `/transporte-luxury` — flota via `FleetGallery.tsx`, hero: `transporte_luxury.svg`
+- `ComfortPage.tsx` → `/transporte-confort` — flota via `FleetGalleryComfort.tsx`, hero: `transporte_confort.svg`
+- `AirTransportPage.tsx` → `/transporte-aereo` — hero: `transporte_aereo.svg`
+- `SecurityPage.tsx` → `/seguridad-privada` — hero: `Homepage_image.svg`
+- `RentACarPage.tsx` → `/rent-a-car` — hero: `rent_a_car.svg`
 - `RelatedServices.tsx` → componente compartido, excluye el servicio actual, fondo `#f9f9fe` (texto oscuro)
-- `FleetGallery.tsx` → slider interactivo de flota luxury con thumbnails scrollables. Imágenes en `public/images/fleet/Luxury_page/` (case-sensitive — Linux/Vercel)
-- Textura de fondo disponible en `public/images/textures/Textura.svg`
+- `FleetGallery.tsx` / `FleetGalleryComfort.tsx` → slider con thumbnails. Imagen principal `aspect-[16/9] scale-120`. Imágenes en `fleet/Luxury_page/` y `fleet/Confort_page/` (case-sensitive)
+- **CTA final en todas las páginas:** `relative bg-primary` + overlay `Textura.svg opacity-3`
+- Textura disponible en `public/images/textures/Textura.svg`
 
 ## Homepage — Fleet sections
 - Flota Luxury y Confort: fila horizontal scrollable (`overflow-x-auto`) con `useRef` y `scrollBy(320)`
@@ -117,5 +119,21 @@ Todas siguen la misma estructura: hero oscuro (#070d0f) + descripción/features 
 - **Pendiente:** Cambiar destinatario a `reservas@rzgroupsas.com` verificando dominio en Resend O usando Google Workspace SMTP (usuario tiene plan pago G Suite)
 
 ## Pendientes
+
+### Producto
 - `/contactanos` — formulario funcional
 - Email sender: decidir entre verificar dominio en Resend o cambiar a Google Workspace SMTP
+
+### SEO — implementado ✓
+- `metadataBase` en `layout.tsx` → `https://rzgroupsas.com` ✓
+- `src/app/sitemap.ts` → genera `/sitemap.xml` ✓
+- `src/app/robots.ts` → genera `/robots.txt`, bloquea `/api/` ✓
+- JSON-LD `LocalBusiness` en homepage (`src/app/page.tsx`) ✓
+
+- `keywords` específicas en cada `page.tsx` de servicio ✓
+- `alternates: { canonical: '/ruta' }` en cada `page.tsx` ✓
+
+- **Imagen Open Graph:** `public/images/og-image.jpg` (1200×630) referenciada en `layout.tsx` ✓
+
+### SEO — completado ✓
+Todo el bloque SEO inicial está implementado. No quedan pendientes de SEO por ahora.

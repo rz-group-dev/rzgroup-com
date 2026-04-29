@@ -92,18 +92,21 @@ Navbar y Footer en `src/components/layout/`.
 
 ### Páginas de servicio
 Patrón estándar en `src/components/services/<Nombre>Page.tsx`:
-1. Hero — `min-h-screen bg-[#070d0f]`, overlay `opacity-20`, texto blanco, CTA vinotinto `rounded-2xl`
+1. Hero — `min-h-screen bg-[#070d0f]`, overlay `opacity-20`, texto blanco (sin eyebrow), CTA vinotinto `rounded-2xl`
 2. Descripción + features — `bg-[#f9f9fe]`, grid 2 cols (texto izq, features der)
-3. Modalidades — `bg-[#f9f9fe]` (solo en páginas distintas a luxury)
-4. Flota — `bg-white`
-5. CTA final — `bg-primary` (vinotinto), botón blanco → `/reservas`
+3. Flota — `bg-white`, slider interactivo con thumbnails
+4. CTA final — `bg-primary relative` (vinotinto) + textura `opacity-3` + botón blanco → `/reservas`
 
-- `/transporte-luxury` — estructura propia: sin sección Modalidades; flota via `FleetGallery.tsx` (slider interactivo con thumbnails); hero image: `public/images/hero/transporte_luxury.svg`; imágenes de flota en `public/images/fleet/Luxury_page/` (case-sensitive)
-- `FleetGallery.tsx` — slider con estado `selected`, thumbnails scrollables, soporte para múltiples imágenes por vehículo (`images[]`). Si `images.length > 1`: layout `grid-cols-[3fr_2fr]` con 3 fotos a la derecha.
+- **Hero images:** `transporte_luxury.svg`, `transporte_confort.svg`, `transporte_aereo.svg`, `rent_a_car.svg`. `/seguridad-privada` usa `Homepage_image.svg`.
+- **Eyebrow en hero:** eliminado de todas las páginas de servicio.
+- **CTA con textura:** todas las páginas de servicio tienen `Textura.svg` con `opacity-3` en la sección CTA final.
+- `/transporte-luxury` — flota via `FleetGallery.tsx`; sin Modalidades; imágenes en `public/images/fleet/Luxury_page/` (case-sensitive)
+- `/transporte-confort` — flota via `FleetGalleryComfort.tsx`; sin Modalidades; imágenes en `public/images/fleet/Confort_page/`
+- `FleetGallery.tsx` / `FleetGalleryComfort.tsx` — slider con `selected` state, thumbnails scrollables, imagen principal `aspect-[16/9] scale-120 object-contain`. Si `images.length > 1`: layout `grid-cols-[3fr_2fr]`.
 - `RelatedServices.tsx` — componente compartido, fondo `#f9f9fe`, texto oscuro. Excluye el servicio actual.
 - Textura de fondo: `public/images/textures/Textura.svg`
 - Todos los botones del sitio usan `rounded-2xl`
-- Footer tagline: clave independiente `footer.tagline` (no comparte con hero)
+- Footer tagline: clave independiente `footer.tagline`
 
 Páginas construidas: `/transporte-luxury`, `/transporte-confort`, `/seguridad-privada`, `/rent-a-car`, `/transporte-aereo`
 Legales: `/politica-privacidad`, `/politica-cookies`
@@ -112,6 +115,14 @@ Pendiente: `/contactanos`
 ### Terminología
 - "Rent a Car" (no "Renting de SUV") — actualizado en nav, ServicesSection y traducciones
 - Ruta: `/rent-a-car` (no `/renting-suv`)
+
+### SEO
+- `metadataBase`, sitemap, robots, JSON-LD LocalBusiness, OG image, keywords y canonical implementados.
+- `src/app/sitemap.ts` → `/sitemap.xml` | `src/app/robots.ts` → `/robots.txt`
+- JSON-LD en `src/app/page.tsx` (homepage)
+- OG image: `public/images/og-image.jpg` (1200×630), referenciada en `layout.tsx`
+- Favicon: `src/app/favicon.ico` + `src/app/apple-icon.png` — Next.js los detecta automáticamente
+- Cada `page.tsx` tiene `keywords` y `alternates.canonical` propios
 
 ### Git / Deploy
 - Antes de push, verificar tamaño de imágenes nuevas: `du -sh public/images/**/*`
