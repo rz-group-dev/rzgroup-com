@@ -3,6 +3,7 @@ import { Jost } from 'next/font/google';
 import I18nProvider from '@/components/I18nProvider';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
+import WhatsAppButton from '@/components/layout/WhatsAppButton';
 import './globals.css';
 
 const jost = Jost({
@@ -38,6 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Navbar />
           <main className="flex-1">{children}</main>
           <Footer />
+          <WhatsAppButton />
         </I18nProvider>
       </body>
     </html>

@@ -274,6 +274,8 @@
     "loading": "Cargando...",
     "error": "Algo salió mal. Intenta de nuevo.",
     "relatedServices": "También te puede interesar",
-    "relatedServicesTitle": "Otros servicios"
+    "relatedServicesTitle": "Otros servicios",
+    "whatsappAria": "Escríbenos por WhatsApp",
+    "whatsappMessage": "Hola, vengo de la página web y quiero contratar un servicio de transporte."
   }
 }
