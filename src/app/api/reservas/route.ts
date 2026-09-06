@@ -71,13 +71,18 @@ export async function POST(req: NextRequest) {
   `;
 
   try {
-    await resend.emails.send({
+    const { error } = await resend.emails.send({
       from: 'RZ Group Reservas <onboarding@resend.dev>',
       to: 'diego2392martinez@gmail.com',
       replyTo: email,
       subject: `Reserva — ${serviceName} — ${name}`,
       html,
     });
+
+    if (error) {
+      console.error('Resend error:', error);
+      return NextResponse.json({ ok: false }, { status: 500 });
+    }
 
     return NextResponse.json({ ok: true });
   } catch (error) {
